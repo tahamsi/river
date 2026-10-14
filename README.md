@@ -123,6 +123,7 @@ analysis/           Table and figure generation with per-cell provenance
 configs/            Baseline, ablation, RIVER-L and native-system configurations
 data/               RIVER-Bench and the annotation guide
 results/            The checksummed release of the reported results
+checkpoints/        The five RIVER-L checkpoints behind the reported results
 scripts/
   benchmark/        Download, build, score and freeze the benchmark
   release/          Structured rerun, rendering, strict scoring and release audit
