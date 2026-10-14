@@ -1,0 +1,33 @@
+{
+  "baseline_id": "minicheck_no_revision",
+  "display_name": "MiniCheck without revision",
+  "official_repository_url": "https://github.com/Liyan06/MiniCheck",
+  "commit_or_tag": "b58b9fa69acbd1015ec970fa65dd752413a053d2",
+  "paper_reference": "Tang et al., MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents.",
+  "license": "Apache-2.0 repository; lytang/MiniCheck-Flan-T5-Large model card declares MIT.",
+  "installation_command": "uv sync --extra minicheck",
+  "isolation": "Install through the optional minicheck dependency group. Model weights are downloaded to the HuggingFace/MiniCheck cache, never Git.",
+  "model_retriever_requirements": [
+    "Package spec: minicheck @ git+https://github.com/Liyan06/MiniCheck.git@b58b9fa69acbd1015ec970fa65dd752413a053d2.",
+    "Model: lytang/MiniCheck-Flan-T5-Large at revision 96eafd01cee2d16cf81aaa2fb226b14f422a37b3.",
+    "Exact cited source_id/chunk_id evidence supplied by the normalized runner."
+  ],
+  "required_credentials": [],
+  "supported_execution_modes": [
+    "controlled"
+  ],
+  "expected_output_mapping": {
+    "stdin": "Internal Python baseline; no external JSON runner is required.",
+    "stdout": "PredictionRecord.claim_verification_results contains exact-chunk labels and scores.",
+    "state": "active or abstain emitted by the MiniCheck no-revision pipeline."
+  },
+  "default_command": [],
+  "readiness_notes": "Use the built-in MiniCheckNoRevisionBaseline. Unit tests mock model inference; the slow integration test runs only when the model is available.",
+  "state_support": {
+    "active": "native exact-chunk MiniCheck supported all accepted claims",
+    "abstain": "native exact-chunk MiniCheck found insufficient support after retry",
+    "disputed": "unsupported",
+    "evolution": "unsupported",
+    "unknown": "unsupported"
+  }
+}

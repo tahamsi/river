@@ -1,0 +1,13 @@
+\begin{table}
+\centering
+\caption{Conflict detection and abstention among systems that decide a revision state.}
+\begin{tabular}{llllllll}
+baseline & n & conflict\_macro\_f1 & conflict\_macro\_f1\_ci\_low & conflict\_macro\_f1\_ci\_high & abstention\_f1 & abstention\_f1\_ci\_low & abstention\_f1\_ci\_high \\ \hline
+last\_write\_wins & 246 & 0.480 & 0.466 & 0.491 & 0.000 & 0.000 & 0.000 \\
+recency\_weighted & 246 & 0.480 & 0.466 & 0.491 & 0.000 & 0.000 & 0.000 \\
+minicheck\_no\_revision & 246 & 0.480 & 0.466 & 0.491 & 0.681 & 0.567 & 0.785 \\
+river\_d & 246 & 0.524 & 0.469 & 0.635 & 0.407 & 0.299 & 0.519 \\
+river\_l & 1230 & \textbf{0.807} & 0.678 & 0.896 & \textbf{0.863} & 0.772 & 0.936 \\
+\end{tabular}
+\footnotesize{Systems emitting no revision state are absent by construction, not by omission.}
+\end{table}

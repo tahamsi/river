@@ -1,0 +1,22 @@
+\begin{table}
+\centering
+\caption{Selective abstention on NEI and evidence-removal examples.}
+\begin{tabular}{lllllllllllllllllllllll}
+baseline & n & precision & precision\_ci\_low & precision\_ci\_high & recall & recall\_ci\_low & recall\_ci\_high & f1 & f1\_ci\_low & f1\_ci\_high & coverage & coverage\_ci\_low & coverage\_ci\_high & selective\_risk & selective\_risk\_ci\_low & selective\_risk\_ci\_high & aurc & aurc\_ci\_low & aurc\_ci\_high & acc\_at\_80cov & acc\_at\_80cov\_ci\_low & acc\_at\_80cov\_ci\_high \\ \hline
+naive\_rag & 90 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+stateless\_rag & 90 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+last\_write\_wins & 90 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 & 0.633 & 0.567 & 0.700 & NA & NA & NA & NA & NA & NA \\
+recency\_weighted & 90 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 & 0.633 & 0.567 & 0.700 & NA & NA & NA & NA & NA & NA \\
+minicheck\_no\_revision & 90 & 0.918 & 0.837 & 0.981 & 0.818 & 0.673 & 0.960 & 0.865 & 0.768 & 0.944 & 0.456 & 0.378 & 0.533 & 1.000 & 1.000 & 1.000 & NA & NA & NA & NA & NA & NA \\
+river\_d & 90 & 0.943 & 0.853 & 1.000 & 0.600 & 0.443 & 0.769 & 0.733 & 0.598 & 0.854 & 0.611 & 0.544 & 0.678 & 0.400 & 0.235 & 0.557 & 0.364 & 0.168 & 0.610 & 0.614 & 0.420 & 0.795 \\
+river\_l & 450 & \textbf{0.964} & 0.904 & 1.000 & \textbf{0.960} & 0.882 & 1.000 & \textbf{0.962} & 0.911 & 0.998 & 0.391 & 0.322 & 0.458 & \textbf{0.062} & 0.000 & 0.181 & \textbf{0.007} & 0.000 & 0.017 & \textbf{0.983} & 0.961 & 1.000 \\
+\end{tabular}
+\footnotesize{Risk-coverage metrics require confidence values and correctness labels.}
+\footnotesize{acc\_at\_80cov is not applicable for last\_write\_wins, minicheck\_no\_revision, naive\_rag, recency\_weighted, stateless\_rag: it needs a confidence score, which this system does not emit.}
+\footnotesize{aurc is not applicable for last\_write\_wins, minicheck\_no\_revision, naive\_rag, recency\_weighted, stateless\_rag: it needs a confidence score, which this system does not emit.}
+\footnotesize{coverage is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{f1 is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{precision is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{recall is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{selective\_risk is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\end{table}

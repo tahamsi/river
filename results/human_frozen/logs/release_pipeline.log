@@ -1,0 +1,276 @@
+Checked 104 packages in 2ms
+..........sss......xx................................................... [ 46%]
+.......s.................s.............................................s [ 93%]
+......x...                                                               [100%]
+145 passed, 6 skipped, 3 xfailed in 9.69s
+wrote resolution for 1188 examples to artifacts/release_human_frozen_v2c_20260922/provenance/review_note_resolution.json
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/last_write_wins_test_seed42.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/naive_rag_test_seed42.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/recency_weighted_test_seed42.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/river_d_test_seed42.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/river_l_test_seed101.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/river_l_test_seed11.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/river_l_test_seed202.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/river_l_test_seed314.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/river_l_test_seed42.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+wrote 248 rows to artifacts/release_human_frozen_v2c_20260922/predictions_rendered/stateless_rag_test_seed42.jsonl
+fixture digest: sha256:c85cdcd2e1f0c37288d543f1399b888ed6fa5d94f181ba6267e4e5747332e80a
+generation contract: river-decision-render-v2
+last_write_wins_test_seed42.jsonl: 98/157 strict direct answers correct (0.624); 0 contract violations; 0 unmatched rows
+naive_rag_test_seed42.jsonl: 107/157 strict direct answers correct (0.682); 0 contract violations; 0 unmatched rows
+recency_weighted_test_seed42.jsonl: 98/157 strict direct answers correct (0.624); 0 contract violations; 0 unmatched rows
+river_d_test_seed42.jsonl: 99/157 strict direct answers correct (0.631); 0 contract violations; 0 unmatched rows
+river_l_test_seed101.jsonl: 126/157 strict direct answers correct (0.803); 0 contract violations; 0 unmatched rows
+river_l_test_seed11.jsonl: 123/157 strict direct answers correct (0.783); 0 contract violations; 0 unmatched rows
+river_l_test_seed202.jsonl: 130/157 strict direct answers correct (0.828); 0 contract violations; 0 unmatched rows
+river_l_test_seed314.jsonl: 125/157 strict direct answers correct (0.796); 0 contract violations; 0 unmatched rows
+river_l_test_seed42.jsonl: 125/157 strict direct answers correct (0.796); 0 contract violations; 0 unmatched rows
+stateless_rag_test_seed42.jsonl: 107/157 strict direct answers correct (0.682); 0 contract violations; 0 unmatched rows
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files: 100%|██████████| 17/17 [00:00<00:00, 1581.39it/s]
+Loading weights:   0%|          | 0/560 [00:00<?, ?it/s]Loading weights:  22%|██▏       | 125/560 [00:00<00:00, 1231.06it/s]Loading weights:  44%|████▍     | 249/560 [00:00<00:00, 1185.54it/s]Loading weights:  66%|██████▌   | 368/560 [00:00<00:00, 1035.76it/s]Loading weights:  85%|████████▍ | 474/560 [00:00<00:00, 1004.29it/s]Loading weights: 100%|██████████| 560/560 [00:00<00:00, 950.92it/s] 
+[transformers] The tied weights mapping and config for this model specifies to tie shared.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+artifacts/release_human_frozen_v2c_20260922/tables/manuscript/numbers.json
+artifacts/release_human_frozen_v2c_20260922/tables/manuscript/provenance.json
+{
+  "decision_faithfulness": {
+    "active_rows": 1428,
+    "rate": 0.988795518207283,
+    "unfaithful_examples": [
+      {
+        "direct_answer": "Oleksandr Filippov play for Sint-Truidense V.V.",
+        "example_id": "expired-04e8d1416cc99663:a",
+        "file": "last_write_wins_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "None of the provided evidence addresses the release dates of \"Marriage Blue\" or \"4 Minute Mile\". The only information given is about the genus *Pupoidopsis*, which is unrelated to the question. Therefore, based strictly on the supplied text, it is impossible to determine which film came out earlier.",
+        "example_id": "grounded-1c33b57a2911b2edc8:a",
+        "file": "last_write_wins_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:a",
+        "file": "last_write_wins_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "Escalier De Service",
+        "example_id": "grounded-f5038b2505f64af6d7:a",
+        "file": "last_write_wins_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "Oleksandr Filippov play for Sint-Truidense V.V.",
+        "example_id": "expired-04e8d1416cc99663:a",
+        "file": "recency_weighted_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "None of the provided evidence addresses the release dates of \"Marriage Blue\" or \"4 Minute Mile\". The only information given is about the genus *Pupoidopsis*, which is unrelated to the question. Therefore, based strictly on the supplied text, it is impossible to determine which film came out earlier.",
+        "example_id": "grounded-1c33b57a2911b2edc8:a",
+        "file": "recency_weighted_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:a",
+        "file": "recency_weighted_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "Escalier De Service",
+        "example_id": "grounded-f5038b2505f64af6d7:a",
+        "file": "recency_weighted_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:a",
+        "file": "river_l_test_seed101.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:b",
+        "file": "river_l_test_seed101.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:a",
+        "file": "river_l_test_seed202.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:b",
+        "file": "river_l_test_seed202.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:a",
+        "file": "river_l_test_seed314.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:b",
+        "file": "river_l_test_seed314.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:a",
+        "file": "river_l_test_seed42.jsonl"
+      },
+      {
+        "direct_answer": "American",
+        "example_id": "grounded-3c3f016ee83e733e6f:b",
+        "file": "river_l_test_seed42.jsonl"
+      }
+    ],
+    "unfaithful_rows": 16
+  },
+  "failures": [],
+  "fixture_rows": 248,
+  "gold_state_counts": {
+    "abstain": 61,
+    "active": 157,
+    "disputed": 20,
+    "evolution": 6,
+    "unknown": 4
+  },
+  "minicheck": {
+    "file": "minicheck_no_revision_test_seed42.jsonl",
+    "resolved_revisions": [
+      "96eafd01cee2d16cf81aaa2fb226b14f422a37b3"
+    ],
+    "rows": 248,
+    "weight_hash_sets": 1
+  },
+  "primary_runs": {
+    "last_write_wins_test_seed42.jsonl": {
+      "baseline": "last_write_wins",
+      "joint_revision_accuracy": 0.3911290322580645,
+      "release_structured_digest": "sha256:50b8ac4880ecd4d7a3fdc811461f922d379f21b627c35f581a30903a0a0b4563",
+      "rows": 248,
+      "seed": 42,
+      "source_structured_digest": "sha256:50b8ac4880ecd4d7a3fdc811461f922d379f21b627c35f581a30903a0a0b4563",
+      "strict_answer_accuracy": 0.6242038216560509
+    },
+    "naive_rag_test_seed42.jsonl": {
+      "baseline": "naive_rag",
+      "joint_revision_accuracy": 0,
+      "release_structured_digest": "sha256:6e31f464da9241774b17c263b07b21b08e9e3a77ad169a91e1176814f6e29440",
+      "rows": 248,
+      "seed": 42,
+      "source_structured_digest": "sha256:6e31f464da9241774b17c263b07b21b08e9e3a77ad169a91e1176814f6e29440",
+      "strict_answer_accuracy": 0.6815286624203821
+    },
+    "recency_weighted_test_seed42.jsonl": {
+      "baseline": "recency_weighted",
+      "joint_revision_accuracy": 0.3911290322580645,
+      "release_structured_digest": "sha256:8d371324d78bda0acbe9e8b28c8f019ae127aea9c42c4752466ee21604084e17",
+      "rows": 248,
+      "seed": 42,
+      "source_structured_digest": "sha256:8d371324d78bda0acbe9e8b28c8f019ae127aea9c42c4752466ee21604084e17",
+      "strict_answer_accuracy": 0.6242038216560509
+    },
+    "river_d_test_seed42.jsonl": {
+      "baseline": "river_d",
+      "joint_revision_accuracy": 0.5362903225806451,
+      "release_structured_digest": "sha256:29c09e17af0b70920a893f72f40631c325cc0e2dce82cbeafeabc71803394767",
+      "rows": 248,
+      "seed": 42,
+      "source_structured_digest": "sha256:29c09e17af0b70920a893f72f40631c325cc0e2dce82cbeafeabc71803394767",
+      "strict_answer_accuracy": 0.6305732484076433
+    },
+    "river_l_test_seed101.jsonl": {
+      "baseline": "river_l",
+      "joint_revision_accuracy": 0.782258064516129,
+      "release_structured_digest": "sha256:05bf5ff18ded0b1aa852b76ec4c55849ec4855bc035d8df8cc687e05007b0193",
+      "rows": 248,
+      "seed": 101,
+      "source_structured_digest": "sha256:05bf5ff18ded0b1aa852b76ec4c55849ec4855bc035d8df8cc687e05007b0193",
+      "strict_answer_accuracy": 0.802547770700637
+    },
+    "river_l_test_seed11.jsonl": {
+      "baseline": "river_l",
+      "joint_revision_accuracy": 0.7701612903225806,
+      "release_structured_digest": "sha256:6e11544f5103233ac496bb35d4612faca6b93e78fd15631f9a02624b35f9714b",
+      "rows": 248,
+      "seed": 11,
+      "source_structured_digest": "sha256:6e11544f5103233ac496bb35d4612faca6b93e78fd15631f9a02624b35f9714b",
+      "strict_answer_accuracy": 0.7834394904458599
+    },
+    "river_l_test_seed202.jsonl": {
+      "baseline": "river_l",
+      "joint_revision_accuracy": 0.7862903225806451,
+      "release_structured_digest": "sha256:d1b9e35fa76ee6da2476ebf4828b3634985fb763358ce69bd3dd589ed5101053",
+      "rows": 248,
+      "seed": 202,
+      "source_structured_digest": "sha256:d1b9e35fa76ee6da2476ebf4828b3634985fb763358ce69bd3dd589ed5101053",
+      "strict_answer_accuracy": 0.8280254777070064
+    },
+    "river_l_test_seed314.jsonl": {
+      "baseline": "river_l",
+      "joint_revision_accuracy": 0.782258064516129,
+      "release_structured_digest": "sha256:8d2095232e52c1593191e633f4a67f6651ff4d8913c96366ab339a4db119b60f",
+      "rows": 248,
+      "seed": 314,
+      "source_structured_digest": "sha256:8d2095232e52c1593191e633f4a67f6651ff4d8913c96366ab339a4db119b60f",
+      "strict_answer_accuracy": 0.7961783439490446
+    },
+    "river_l_test_seed42.jsonl": {
+      "baseline": "river_l",
+      "joint_revision_accuracy": 0.7741935483870968,
+      "release_structured_digest": "sha256:ac6d373fd19c9f994733ef12b1b634474492ded8bc6f8598b4e09609bad535a4",
+      "rows": 248,
+      "seed": 42,
+      "source_structured_digest": "sha256:ac6d373fd19c9f994733ef12b1b634474492ded8bc6f8598b4e09609bad535a4",
+      "strict_answer_accuracy": 0.7961783439490446
+    },
+    "stateless_rag_test_seed42.jsonl": {
+      "baseline": "stateless_rag",
+      "joint_revision_accuracy": 0,
+      "release_structured_digest": "sha256:8fc1d21fac4078cc883f49fc777df3e9bcaebd448a5cba5761e9f08b1d5dac93",
+      "rows": 248,
+      "seed": 42,
+      "source_structured_digest": "sha256:8fc1d21fac4078cc883f49fc777df3e9bcaebd448a5cba5761e9f08b1d5dac93",
+      "strict_answer_accuracy": 0.6815286624203821
+    }
+  },
+  "river_l_seed_summary": {
+    "joint_revision_accuracy": {
+      "mean": 0.7790322580645161,
+      "n_seeds": 5,
+      "sample_sd": 0.00662567609885281
+    },
+    "strict_answer_accuracy": {
+      "mean": 0.8012738853503185,
+      "n_seeds": 5,
+      "sample_sd": 0.016486852363751314
+    }
+  },
+  "stale_review_notes_resolved": 196,
+  "status": "pass",
+  "warnings": [
+    "last_write_wins_test_seed42.jsonl: 4/248 active answers do not literally match the selected hypothesis (see decision_faithfulness.unfaithful_examples)",
+    "recency_weighted_test_seed42.jsonl: 4/248 active answers do not literally match the selected hypothesis (see decision_faithfulness.unfaithful_examples)",
+    "river_l_test_seed101.jsonl: 2/158 active answers do not literally match the selected hypothesis (see decision_faithfulness.unfaithful_examples)",
+    "river_l_test_seed202.jsonl: 2/166 active answers do not literally match the selected hypothesis (see decision_faithfulness.unfaithful_examples)",
+    "river_l_test_seed314.jsonl: 2/155 active answers do not literally match the selected hypothesis (see decision_faithfulness.unfaithful_examples)",
+    "river_l_test_seed42.jsonl: 2/158 active answers do not literally match the selected hypothesis (see decision_faithfulness.unfaithful_examples)"
+  ]
+}
+..........sss......xx................................................... [ 46%]
+.......s.................s.............................................s [ 93%]
+......x...                                                               [100%]
+145 passed, 6 skipped, 3 xfailed in 11.92s
+Release pipeline completed successfully: artifacts/release_human_frozen_v2c_20260922

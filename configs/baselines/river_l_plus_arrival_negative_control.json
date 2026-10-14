@@ -1,0 +1,1 @@
+{"checkpoint": "artifacts/river_l_merged_ablations/river_l_plus_arrival_negative_control.pt", "device": "cuda", "condition": "river_l_plus_arrival_negative_control", "ablation": "plus_arrival_negative_control"}

@@ -1,0 +1,9 @@
+{
+  "condition": "river_d_plus_arrival_negative_control",
+  "ablation": "plus_arrival_feature",
+  "mechanism": "arrival_time_negative_control",
+  "support_threshold": 0.6,
+  "margin_threshold": 0.15,
+  "abstention_threshold": 0.3,
+  "use_arrival_as_truth_feature": true
+}

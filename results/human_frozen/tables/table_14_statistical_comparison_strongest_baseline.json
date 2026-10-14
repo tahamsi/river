@@ -1,0 +1,79 @@
+{
+  "columns": [
+    "candidate",
+    "reference",
+    "metric",
+    "estimate",
+    "ci_low",
+    "ci_high",
+    "mcnemar_p",
+    "mcnemar_p_holm",
+    "permutation_p",
+    "permutation_p_holm",
+    "cohen_dz",
+    "n"
+  ],
+  "not_applicable": {},
+  "rows": [
+    {
+      "candidate": "river_d",
+      "ci_high": 0.22357723577235772,
+      "ci_low": 0.06910569105691057,
+      "cohen_dz": 0.24317057226999672,
+      "estimate": 0.14634146341463414,
+      "mcnemar_p": 0.0002616832323769271,
+      "mcnemar_p_holm": 0.0002616832323769271,
+      "metric": "revision_accuracy_difference",
+      "n": 246,
+      "permutation_p": 0.0001,
+      "permutation_p_holm": 0.0001,
+      "reference": "last_write_wins"
+    },
+    {
+      "candidate": "river_l",
+      "ci_high": 0.45934959349593496,
+      "ci_low": 0.3089430894308943,
+      "cohen_dz": 0.6360575124296909,
+      "estimate": 0.3861788617886179,
+      "mcnemar_p": 1.1179658505994963e-18,
+      "mcnemar_p_holm": 2.2359317011989926e-18,
+      "metric": "revision_accuracy_difference",
+      "n": 246,
+      "permutation_p": 0.0,
+      "permutation_p_holm": 0.0,
+      "reference": "last_write_wins"
+    }
+  ],
+  "spec": {
+    "caption": "Paired statistical comparison against the strongest non-RIVER baseline.",
+    "comparison_mode": "controlled",
+    "conditional_on": null,
+    "confidence_intervals": "Paired bootstrap confidence intervals over aligned examples.",
+    "directions": {
+      "cohen_dz": "higher",
+      "estimate": "higher",
+      "mcnemar_p": "lower",
+      "mcnemar_p_holm": "lower",
+      "permutation_p": "lower",
+      "permutation_p_holm": "lower"
+    },
+    "family_number": 14,
+    "filters": "controlled rows aligned by example_id and seed",
+    "footnotes": [
+      "The strongest baseline is selected by answer-or-revision accuracy, excluding RIVER variants."
+    ],
+    "grouping": [
+      "candidate",
+      "reference"
+    ],
+    "minimum_required_data": "At least one RIVER baseline, one non-RIVER baseline, and shared example IDs.",
+    "required_columns": [
+      "example_id",
+      "baseline",
+      "seed"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "statistical_comparison_strongest_baseline",
+    "title": "Statistical comparison with strongest baseline"
+  }
+}

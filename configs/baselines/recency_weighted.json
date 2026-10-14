@@ -1,0 +1,6 @@
+{
+  "relevance_weight": 1.0,
+  "importance_weight": 1.0,
+  "recency_weight": 1.0,
+  "recency_decay": 0.995
+}

@@ -1,0 +1,1 @@
+{"checkpoint": "artifacts/river_l_merged_ablations/river_l_minus_temporal_features.pt", "device": "cuda", "condition": "river_l_minus_temporal_features", "ablation": "minus_temporal_features"}

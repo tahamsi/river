@@ -1,0 +1,545 @@
+{
+  "river_l_five_seed_aggregate": {
+    "active_selection_accuracy": {
+      "mean": 0.7961783439490446,
+      "sample_sd": 0.021599777016322506
+    },
+    "joint_structured_accuracy": {
+      "mean": 0.7790322580645161,
+      "sample_sd": 0.00662567609885281
+    },
+    "state_accuracy": {
+      "mean": 0.8556451612903226,
+      "sample_sd": 0.007213122508063831
+    }
+  },
+  "runs": [
+    {
+      "active_selection_accuracy": 0.6178343949044586,
+      "active_selection_accuracy_wilson95": [
+        0.5398723951948854,
+        0.6901677963781565
+      ],
+      "active_selection_n": 157,
+      "baseline": "last_write_wins",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 0.0,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.5,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 0.5,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.0,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.4827586206896552,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.3,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.0,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.375,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.3911290322580645,
+      "joint_structured_accuracy_wilson95": [
+        0.33249599422044057,
+        0.4530833926967593
+      ],
+      "seed": 42,
+      "state_accuracy": 0.6330645161290323,
+      "state_accuracy_wilson95": [
+        0.5714746882973715,
+        0.6905949499149399
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "baseline": "naive_rag",
+      "examples": 248,
+      "reason": "baseline does not emit a structured decision state",
+      "seed": 42,
+      "structured_metrics_applicable": false
+    },
+    {
+      "active_selection_accuracy": 0.6178343949044586,
+      "active_selection_accuracy_wilson95": [
+        0.5398723951948854,
+        0.6901677963781565
+      ],
+      "active_selection_n": 157,
+      "baseline": "recency_weighted",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 0.0,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.5,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 0.5,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.0,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.4827586206896552,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.3,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.0,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.375,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.3911290322580645,
+      "joint_structured_accuracy_wilson95": [
+        0.33249599422044057,
+        0.4530833926967593
+      ],
+      "seed": 42,
+      "state_accuracy": 0.6330645161290323,
+      "state_accuracy_wilson95": [
+        0.5714746882973715,
+        0.6905949499149399
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "active_selection_accuracy": 0.6305732484076433,
+      "active_selection_accuracy_wilson95": [
+        0.5527994644956893,
+        0.7021099369771409
+      ],
+      "active_selection_n": 157,
+      "baseline": "river_d",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 0.0,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.9696969696969697,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 1.0,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.08333333333333333,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.06896551724137931,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.4,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.6666666666666666,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.0,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.25,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.5362903225806451,
+      "joint_structured_accuracy_wilson95": [
+        0.4741446594306386,
+        0.5973288782636279
+      ],
+      "seed": 42,
+      "state_accuracy": 0.5362903225806451,
+      "state_accuracy_wilson95": [
+        0.4741446594306386,
+        0.5973288782636279
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "active_selection_accuracy": 0.802547770700637,
+      "active_selection_accuracy_wilson95": [
+        0.7333790661378463,
+        0.8572646689821262
+      ],
+      "active_selection_n": 157,
+      "baseline": "river_l",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 1.0,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.9545454545454546,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 1.0,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.9166666666666666,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.5862068965517241,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.2,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.0,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.125,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.782258064516129,
+      "joint_structured_accuracy_wilson95": [
+        0.72679927078013,
+        0.8291060223975001
+      ],
+      "seed": 101,
+      "state_accuracy": 0.8548387096774194,
+      "state_accuracy_wilson95": [
+        0.8055845138277519,
+        0.8932678547384117
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "active_selection_accuracy": 0.7707006369426752,
+      "active_selection_accuracy_wilson95": [
+        0.6989473636647464,
+        0.8295233467057553
+      ],
+      "active_selection_n": 157,
+      "baseline": "river_l",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 0.875,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.9696969696969697,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 1.0,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.9166666666666666,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.5172413793103449,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.2,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.0,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.3333333333333333,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.25,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.7701612903225806,
+      "joint_structured_accuracy_wilson95": [
+        0.7139151150986858,
+        0.8181656655141887
+      ],
+      "seed": 11,
+      "state_accuracy": 0.8508064516129032,
+      "state_accuracy_wilson95": [
+        0.8011290130188811,
+        0.8897818513590305
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "active_selection_accuracy": 0.8280254777070064,
+      "active_selection_accuracy_wilson95": [
+        0.7613491468157608,
+        0.8790330081037881
+      ],
+      "active_selection_n": 157,
+      "baseline": "river_l",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 0.625,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.9696969696969697,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 1.0,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.9166666666666666,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.5862068965517241,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.5,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.3333333333333333,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.25,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.7862903225806451,
+      "joint_structured_accuracy_wilson95": [
+        0.731107730457856,
+        0.8327390669080258
+      ],
+      "seed": 202,
+      "state_accuracy": 0.8629032258064516,
+      "state_accuracy_wilson95": [
+        0.8145290612489945,
+        0.9002063156936727
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "active_selection_accuracy": 0.7961783439490446,
+      "active_selection_accuracy_wilson95": [
+        0.7264482318349904,
+        0.8517608983350878
+      ],
+      "active_selection_n": 157,
+      "baseline": "river_l",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 1.0,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.9696969696969697,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 1.0,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.9166666666666666,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.5862068965517241,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.2,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.0,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.0,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.782258064516129,
+      "joint_structured_accuracy_wilson95": [
+        0.72679927078013,
+        0.8291060223975001
+      ],
+      "seed": 314,
+      "state_accuracy": 0.8467741935483871,
+      "state_accuracy_wilson95": [
+        0.7966842073892084,
+        0.8862851528004514
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "active_selection_accuracy": 0.7834394904458599,
+      "active_selection_accuracy_wilson95": [
+        0.7126547105681234,
+        0.8406852097021666
+      ],
+      "active_selection_n": 157,
+      "baseline": "river_l",
+      "by_intervention_joint_accuracy": {
+        "concurrent_disagreement": {
+          "accuracy": 1.0,
+          "n": 16
+        },
+        "evidence_removal": {
+          "accuracy": 0.9696969696969697,
+          "n": 66
+        },
+        "expired_evidence": {
+          "accuracy": 1.0,
+          "n": 52
+        },
+        "insufficient_evidence_nei": {
+          "accuracy": 0.9166666666666666,
+          "n": 24
+        },
+        "order_reversal": {
+          "accuracy": 0.4827586206896552,
+          "n": 58
+        },
+        "repeated_weak_assertion": {
+          "accuracy": 0.4,
+          "n": 10
+        },
+        "retroactive_correction": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "supported_genuine_update": {
+          "accuracy": 0.5,
+          "n": 6
+        },
+        "temporal_evolution": {
+          "accuracy": 0.0,
+          "n": 6
+        },
+        "unsupported_late_assertion": {
+          "accuracy": 0.25,
+          "n": 8
+        }
+      },
+      "examples": 248,
+      "joint_structured_accuracy": 0.7741935483870968,
+      "joint_structured_accuracy_wilson95": [
+        0.7182030933561769,
+        0.8218191914449493
+      ],
+      "seed": 42,
+      "state_accuracy": 0.8629032258064516,
+      "state_accuracy_wilson95": [
+        0.8145290612489945,
+        0.9002063156936727
+      ],
+      "structured_metrics_applicable": true
+    },
+    {
+      "baseline": "stateless_rag",
+      "examples": 248,
+      "reason": "baseline does not emit a structured decision state",
+      "seed": 42,
+      "structured_metrics_applicable": false
+    }
+  ],
+  "scope": "structured decisions only; no generated-answer or citation claims"
+}

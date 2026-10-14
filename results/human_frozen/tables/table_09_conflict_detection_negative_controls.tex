@@ -1,0 +1,20 @@
+\begin{table}
+\centering
+\caption{Conflict detection including negative controls.}
+\begin{tabular}{lllllllllllllllll}
+baseline & n & precision & precision\_ci\_low & precision\_ci\_high & recall & recall\_ci\_low & recall\_ci\_high & macro\_f1 & macro\_f1\_ci\_low & macro\_f1\_ci\_high & specificity & specificity\_ci\_low & specificity\_ci\_high & false\_conflict & false\_conflict\_ci\_low & false\_conflict\_ci\_high \\ \hline
+naive\_rag & 88 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+stateless\_rag & 88 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+last\_write\_wins & 88 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.450 & 0.413 & 0.482 & \textbf{1.000} & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 \\
+recency\_weighted & 88 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.450 & 0.413 & 0.482 & \textbf{1.000} & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 \\
+minicheck\_no\_revision & 88 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.450 & 0.413 & 0.482 & \textbf{1.000} & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 \\
+river\_d & 88 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.443 & 0.397 & 0.476 & 0.972 & 0.909 & 1.000 & 0.028 & 0.000 & 0.091 \\
+river\_l & 440 & \textbf{0.720} & 0.424 & 0.960 & \textbf{0.900} & 0.800 & 1.000 & \textbf{0.874} & 0.745 & 0.960 & 0.922 & 0.835 & 0.991 & 0.078 & 0.009 & 0.165 \\
+\end{tabular}
+\footnotesize{Temporal-evolution and non-conflict interventions serve as negative controls.}
+\footnotesize{false\_conflict is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{macro\_f1 is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{precision is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{recall is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{specificity is not applicable for naive\_rag, stateless\_rag: it needs a predicted revision state, which this system does not emit.}
+\end{table}

@@ -1,0 +1,797 @@
+{
+  "columns": [
+    "comparison_mode",
+    "source_dataset",
+    "baseline",
+    "n",
+    "accuracy",
+    "accuracy_ci_low",
+    "accuracy_ci_high",
+    "rfr",
+    "rfr_ci_low",
+    "rfr_ci_high",
+    "abstention_f1",
+    "abstention_f1_ci_low",
+    "abstention_f1_ci_high"
+  ],
+  "not_applicable": {
+    "controlled|2wikimultihopqa|naive_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither"
+    },
+    "controlled|2wikimultihopqa|stateless_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither"
+    },
+    "controlled|fever|last_write_wins": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|fever|minicheck_no_revision": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|fever|naive_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|fever|recency_weighted": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|fever|river_d": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|fever|river_l": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|fever|stateless_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|last_write_wins": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|minicheck_no_revision": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|naive_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|recency_weighted": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|river_d": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|river_l": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|longmemeval|stateless_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|pat_questions|naive_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither"
+    },
+    "controlled|pat_questions|stateless_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither"
+    },
+    "controlled|wikicontradict|last_write_wins": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikicontradict|minicheck_no_revision": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikicontradict|naive_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikicontradict|recency_weighted": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikicontradict|river_d": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikicontradict|river_l": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikicontradict|stateless_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|last_write_wins": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|minicheck_no_revision": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|naive_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|recency_weighted": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|river_d": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|river_l": {
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    },
+    "controlled|wikipedia_revision|stateless_rag": {
+      "abstention_f1": "a predicted revision state, which this system does not emit",
+      "accuracy": "either a resolvable gold answer or a predicted revision state, and this group has neither",
+      "rfr": "examples whose arrival order was reversed, of which this group contains none"
+    }
+  },
+  "rows": [
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "comparison_mode": "controlled",
+      "n": 58,
+      "rfr": 0.09523809523809523,
+      "rfr_ci_high": 0.23809523809523808,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "comparison_mode": "controlled",
+      "n": 58,
+      "rfr": 0.09523809523809523,
+      "rfr_ci_high": 0.23809523809523808,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.4827586206896552,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.4482758620689655,
+      "baseline": "last_write_wins",
+      "comparison_mode": "controlled",
+      "n": 58,
+      "rfr": 1.0,
+      "rfr_ci_high": 1.0,
+      "rfr_ci_low": 1.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.4827586206896552,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.4482758620689655,
+      "baseline": "recency_weighted",
+      "comparison_mode": "controlled",
+      "n": 58,
+      "rfr": 1.0,
+      "rfr_ci_high": 1.0,
+      "rfr_ci_low": 1.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "comparison_mode": "controlled",
+      "n": 58,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.06896551724137931,
+      "accuracy_ci_high": 0.1724137931034483,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "comparison_mode": "controlled",
+      "n": 58,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5517241379310345,
+      "accuracy_ci_high": 0.696551724137931,
+      "accuracy_ci_low": 0.4068965517241379,
+      "baseline": "river_l",
+      "comparison_mode": "controlled",
+      "n": 290,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "2wikimultihopqa"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "comparison_mode": "controlled",
+      "n": 24,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "comparison_mode": "controlled",
+      "n": 24,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "last_write_wins",
+      "comparison_mode": "controlled",
+      "n": 24,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "recency_weighted",
+      "comparison_mode": "controlled",
+      "n": 24,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": 0.7368421052631579,
+      "abstention_f1_ci_high": 0.9090909090909091,
+      "abstention_f1_ci_low": 0.5,
+      "accuracy": 0.5833333333333334,
+      "accuracy_ci_high": 0.8333333333333334,
+      "accuracy_ci_low": 0.3333333333333333,
+      "baseline": "minicheck_no_revision",
+      "comparison_mode": "controlled",
+      "n": 24,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": 0.15384615384615385,
+      "abstention_f1_ci_high": 0.4,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.08333333333333333,
+      "accuracy_ci_high": 0.25,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "comparison_mode": "controlled",
+      "n": 24,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": 0.9565217391304348,
+      "abstention_f1_ci_high": 1.0,
+      "abstention_f1_ci_low": 0.8571428571428571,
+      "accuracy": 0.9166666666666666,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.75,
+      "baseline": "river_l",
+      "comparison_mode": "controlled",
+      "n": 120,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "fever"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "comparison_mode": "controlled",
+      "n": 12,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "comparison_mode": "controlled",
+      "n": 12,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.25,
+      "accuracy_ci_high": 0.4166666666666667,
+      "accuracy_ci_low": 0.08333333333333333,
+      "baseline": "last_write_wins",
+      "comparison_mode": "controlled",
+      "n": 12,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.25,
+      "accuracy_ci_high": 0.4166666666666667,
+      "accuracy_ci_low": 0.08333333333333333,
+      "baseline": "recency_weighted",
+      "comparison_mode": "controlled",
+      "n": 12,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "comparison_mode": "controlled",
+      "n": 12,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.3333333333333333,
+      "accuracy_ci_high": 0.6666666666666666,
+      "accuracy_ci_low": 0.08333333333333333,
+      "baseline": "river_d",
+      "comparison_mode": "controlled",
+      "n": 12,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.31666666666666665,
+      "accuracy_ci_high": 0.48333333333333334,
+      "accuracy_ci_low": 0.15,
+      "baseline": "river_l",
+      "comparison_mode": "controlled",
+      "n": 60,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "longmemeval"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "comparison_mode": "controlled",
+      "n": 118,
+      "rfr": 0.7391304347826086,
+      "rfr_ci_high": 0.9090909090909091,
+      "rfr_ci_low": 0.5454545454545454,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "comparison_mode": "controlled",
+      "n": 118,
+      "rfr": 0.7391304347826086,
+      "rfr_ci_high": 0.9090909090909091,
+      "rfr_ci_low": 0.5454545454545454,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "last_write_wins",
+      "comparison_mode": "controlled",
+      "n": 118,
+      "rfr": 1.0,
+      "rfr_ci_high": 1.0,
+      "rfr_ci_low": 1.0,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "recency_weighted",
+      "comparison_mode": "controlled",
+      "n": 118,
+      "rfr": 1.0,
+      "rfr_ci_high": 1.0,
+      "rfr_ci_low": 1.0,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": 0.9393939393939393,
+      "abstention_f1_ci_high": 0.9859154929577464,
+      "abstention_f1_ci_low": 0.8767123287671234,
+      "accuracy": 0.2627118644067797,
+      "accuracy_ci_high": 0.3220338983050847,
+      "accuracy_ci_low": 0.19491525423728814,
+      "baseline": "minicheck_no_revision",
+      "comparison_mode": "controlled",
+      "n": 118,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": 0.96875,
+      "abstention_f1_ci_high": 1.0,
+      "abstention_f1_ci_low": 0.9152542372881356,
+      "accuracy": 0.9830508474576272,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.9576271186440678,
+      "baseline": "river_d",
+      "comparison_mode": "controlled",
+      "n": 118,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": 0.9655172413793103,
+      "abstention_f1_ci_high": 1.0,
+      "abstention_f1_ci_low": 0.9130434782608695,
+      "accuracy": 0.9813559322033898,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.9559322033898305,
+      "baseline": "river_l",
+      "comparison_mode": "controlled",
+      "n": 590,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "source_dataset": "pat_questions"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "comparison_mode": "controlled",
+      "n": 34,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "comparison_mode": "controlled",
+      "n": 34,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.17647058823529413,
+      "accuracy_ci_high": 0.29411764705882354,
+      "accuracy_ci_low": 0.058823529411764705,
+      "baseline": "last_write_wins",
+      "comparison_mode": "controlled",
+      "n": 34,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.17647058823529413,
+      "accuracy_ci_high": 0.29411764705882354,
+      "accuracy_ci_low": 0.058823529411764705,
+      "baseline": "recency_weighted",
+      "comparison_mode": "controlled",
+      "n": 34,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": 0.26666666666666666,
+      "abstention_f1_ci_high": 0.5333333333333333,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.11764705882352941,
+      "accuracy_ci_high": 0.29411764705882354,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "comparison_mode": "controlled",
+      "n": 34,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.17647058823529413,
+      "accuracy_ci_high": 0.35294117647058826,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "comparison_mode": "controlled",
+      "n": 34,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5529411764705883,
+      "accuracy_ci_high": 0.7411764705882353,
+      "accuracy_ci_low": 0.3588235294117647,
+      "baseline": "river_l",
+      "comparison_mode": "controlled",
+      "n": 170,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikicontradict"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "comparison_mode": "controlled",
+      "n": 2,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    },
+    {
+      "abstention_f1": null,
+      "abstention_f1_ci_high": null,
+      "abstention_f1_ci_low": null,
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "comparison_mode": "controlled",
+      "n": 2,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "last_write_wins",
+      "comparison_mode": "controlled",
+      "n": 2,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "recency_weighted",
+      "comparison_mode": "controlled",
+      "n": 2,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "comparison_mode": "controlled",
+      "n": 2,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "river_d",
+      "comparison_mode": "controlled",
+      "n": 2,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "accuracy": 0.4,
+      "accuracy_ci_high": 0.4,
+      "accuracy_ci_low": 0.4,
+      "baseline": "river_l",
+      "comparison_mode": "controlled",
+      "n": 10,
+      "rfr": null,
+      "rfr_ci_high": null,
+      "rfr_ci_low": null,
+      "source_dataset": "wikipedia_revision"
+    }
+  ],
+  "spec": {
+    "caption": "Generalization across external datasets.",
+    "comparison_mode": "controlled and native rows reported separately",
+    "conditional_on": null,
+    "confidence_intervals": "95% bootstrap confidence intervals over paired examples where pair_id is available; otherwise over example-level rows.",
+    "directions": {
+      "abstention_f1": "higher",
+      "accuracy": "higher",
+      "rfr": "lower"
+    },
+    "family_number": 12,
+    "filters": "non-engineering external source datasets",
+    "footnotes": [
+      "Authored unit fixtures and synthetic sources are refused for this table."
+    ],
+    "grouping": [
+      "comparison_mode",
+      "source_dataset",
+      "baseline"
+    ],
+    "minimum_required_data": "At least one non-engineering source_dataset with complete labels.",
+    "required_columns": [
+      "source_dataset",
+      "baseline",
+      "comparison_mode"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "external_dataset_generalization",
+    "title": "External-dataset generalization"
+  }
+}

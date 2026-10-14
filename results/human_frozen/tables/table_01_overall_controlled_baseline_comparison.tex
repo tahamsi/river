@@ -1,0 +1,18 @@
+\begin{table}
+\centering
+\caption{Overall controlled comparison across normalized RIVER-Bench prediction records.}
+\begin{tabular}{lllllllllll}
+baseline & n & answer\_accuracy & answer\_accuracy\_ci\_low & answer\_accuracy\_ci\_high & rfr & rfr\_ci\_low & rfr\_ci\_high & usr & usr\_ci\_low & usr\_ci\_high \\ \hline
+naive\_rag & 246 & 0.686 & 0.603 & 0.767 & 0.432 & 0.286 & 0.579 & 0.333 & 0.000 & 1.000 \\
+stateless\_rag & 246 & 0.686 & 0.603 & 0.767 & 0.432 & 0.286 & 0.579 & 0.333 & 0.000 & 1.000 \\
+last\_write\_wins & 246 & 0.622 & 0.587 & 0.662 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+recency\_weighted & 246 & 0.622 & 0.587 & 0.662 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+minicheck\_no\_revision & 246 & NA & NA & NA & \textbf{0.000} & 0.000 & 0.000 & NA & NA & NA \\
+river\_d & 246 & 0.628 & 0.524 & 0.732 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 \\
+river\_l & 1230 & \textbf{0.801} & 0.725 & 0.874 & \textbf{0.000} & 0.000 & 0.000 & 0.667 & 0.000 & 1.000 \\
+\end{tabular}
+\footnotesize{Controlled rows share evidence and budgets where technically valid.}
+\footnotesize{Lower is better for RFR, USR, and ECE.}
+\footnotesize{answer\_accuracy is not applicable for minicheck\_no\_revision: it needs strict direct-answer labels produced under generation contract v2, which this system does not emit.}
+\footnotesize{usr is not applicable for minicheck\_no\_revision: it needs a selected hypothesis this system named on at least one late-assertion row, which this system does not emit.}
+\end{table}

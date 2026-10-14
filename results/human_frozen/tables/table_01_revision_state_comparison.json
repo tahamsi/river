@@ -1,0 +1,93 @@
+{
+  "columns": [
+    "baseline",
+    "n",
+    "conflict_macro_f1",
+    "conflict_macro_f1_ci_low",
+    "conflict_macro_f1_ci_high",
+    "abstention_f1",
+    "abstention_f1_ci_low",
+    "abstention_f1_ci_high"
+  ],
+  "not_applicable": {},
+  "rows": [
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "baseline": "last_write_wins",
+      "conflict_macro_f1": 0.47991543340380544,
+      "conflict_macro_f1_ci_high": 0.4906832298136646,
+      "conflict_macro_f1_ci_low": 0.46637744034707157,
+      "n": 246
+    },
+    {
+      "abstention_f1": 0.0,
+      "abstention_f1_ci_high": 0.0,
+      "abstention_f1_ci_low": 0.0,
+      "baseline": "recency_weighted",
+      "conflict_macro_f1": 0.47991543340380544,
+      "conflict_macro_f1_ci_high": 0.4906832298136646,
+      "conflict_macro_f1_ci_low": 0.46637744034707157,
+      "n": 246
+    },
+    {
+      "abstention_f1": 0.6805555555555556,
+      "abstention_f1_ci_high": 0.7851851851851853,
+      "abstention_f1_ci_low": 0.5666666666666667,
+      "baseline": "minicheck_no_revision",
+      "conflict_macro_f1": 0.47991543340380544,
+      "conflict_macro_f1_ci_high": 0.4906832298136646,
+      "conflict_macro_f1_ci_low": 0.46637744034707157,
+      "n": 246
+    },
+    {
+      "abstention_f1": 0.40740740740740744,
+      "abstention_f1_ci_high": 0.5194805194805194,
+      "abstention_f1_ci_low": 0.2994011976047904,
+      "baseline": "river_d",
+      "conflict_macro_f1": 0.5241779497098646,
+      "conflict_macro_f1_ci_high": 0.6351694915254237,
+      "conflict_macro_f1_ci_low": 0.468682505399568,
+      "n": 246
+    },
+    {
+      "abstention_f1": 0.8627450980392157,
+      "abstention_f1_ci_high": 0.9360902255639098,
+      "abstention_f1_ci_low": 0.7715133531157269,
+      "baseline": "river_l",
+      "conflict_macro_f1": 0.8067710663683818,
+      "conflict_macro_f1_ci_high": 0.8959830866807611,
+      "conflict_macro_f1_ci_low": 0.6780843384783403,
+      "n": 1230
+    }
+  ],
+  "spec": {
+    "caption": "Conflict detection and abstention among systems that decide a revision state.",
+    "comparison_mode": "controlled",
+    "conditional_on": null,
+    "confidence_intervals": "95% bootstrap confidence intervals over paired examples where pair_id is available; otherwise over example-level rows.",
+    "directions": {
+      "abstention_f1": "higher",
+      "conflict_macro_f1": "higher"
+    },
+    "family_number": 1,
+    "filters": "comparison_mode == controlled; rows from systems that emit a revision state",
+    "footnotes": [
+      "Systems emitting no revision state are absent by construction, not by omission."
+    ],
+    "grouping": [
+      "baseline"
+    ],
+    "minimum_required_data": "At least one controlled row carrying a predicted state.",
+    "required_columns": [
+      "baseline",
+      "comparison_mode",
+      "gold_state",
+      "predicted_state"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "revision_state_comparison",
+    "title": "Revision-state comparison"
+  }
+}

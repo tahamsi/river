@@ -1,0 +1,20 @@
+\begin{table}
+\centering
+\caption{Arrival-order sensitivity decomposed on paired order-reversal examples.}
+\begin{tabular}{lllllllllllllllllllllll}
+baseline & n & rfr & rfr\_ci\_low & rfr\_ci\_high & prs\_jsd & prs\_jsd\_ci\_low & prs\_jsd\_ci\_high & order\_consistency & order\_consistency\_ci\_low & order\_consistency\_ci\_high & stable\_correct & stable\_correct\_ci\_low & stable\_correct\_ci\_high & stable\_wrong & stable\_wrong\_ci\_low & stable\_wrong\_ci\_high & flip\_to\_correct & flip\_to\_correct\_ci\_low & flip\_to\_correct\_ci\_high & flip\_to\_wrong & flip\_to\_wrong\_ci\_low & flip\_to\_wrong\_ci\_high \\ \hline
+naive\_rag & 58 & 0.095 & 0.000 & 0.238 & NA & NA & NA & 0.905 & 0.762 & 1.000 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+stateless\_rag & 58 & 0.095 & 0.000 & 0.238 & NA & NA & NA & 0.905 & 0.762 & 1.000 & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+last\_write\_wins & 58 & 1.000 & 1.000 & 1.000 & NA & NA & NA & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.931} & 0.828 & 1.000 & 0.034 & 0.000 & 0.103 \\
+recency\_weighted & 58 & 1.000 & 1.000 & 1.000 & NA & NA & NA & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.931} & 0.828 & 1.000 & 0.034 & 0.000 & 0.103 \\
+minicheck\_no\_revision & 58 & \textbf{0.000} & 0.000 & 0.000 & NA & NA & NA & \textbf{1.000} & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 \\
+river\_d & 58 & \textbf{0.000} & 0.000 & 0.000 & NA & NA & NA & \textbf{1.000} & 1.000 & 1.000 & 0.069 & 0.000 & 0.172 & 0.931 & 0.828 & 1.000 & 0.000 & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 \\
+river\_l & 290 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 & \textbf{0.552} & 0.407 & 0.697 & 0.448 & 0.303 & 0.593 & 0.000 & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 \\
+\end{tabular}
+\footnotesize{Pair IDs are mandatory; rows without complete pairs are rejected.}
+\footnotesize{flip\_to\_correct is not applicable for naive\_rag, stateless\_rag: it needs reversed-order pairs scored by revision correctness, and this system emits no revision state.}
+\footnotesize{flip\_to\_wrong is not applicable for naive\_rag, stateless\_rag: it needs reversed-order pairs scored by revision correctness, and this system emits no revision state.}
+\footnotesize{prs\_jsd is not applicable for last\_write\_wins, minicheck\_no\_revision, naive\_rag, recency\_weighted, river\_d, stateless\_rag: it needs a distribution over revision states, which this system does not emit.}
+\footnotesize{stable\_correct is not applicable for naive\_rag, stateless\_rag: it needs reversed-order pairs scored by revision correctness, and this system emits no revision state.}
+\footnotesize{stable\_wrong is not applicable for naive\_rag, stateless\_rag: it needs reversed-order pairs scored by revision correctness, and this system emits no revision state.}
+\end{table}

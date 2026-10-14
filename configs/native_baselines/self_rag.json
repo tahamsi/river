@@ -1,0 +1,38 @@
+{
+  "baseline_id": "self_rag",
+  "display_name": "Self-RAG",
+  "official_repository_url": "https://github.com/AkariAsai/self-rag",
+  "commit_or_tag": "1fcdc420e48f50a7d7ab1ece5494221b93252e99",
+  "paper_reference": "Asai et al., SELF-RAG: Learning to Retrieve, Generate and Critique through Self-Reflection, ICLR 2024.",
+  "license": "MIT",
+  "installation_command": "git clone https://github.com/AkariAsai/self-rag.git external/self-rag && git -C external/self-rag checkout 1fcdc420e48f50a7d7ab1ece5494221b93252e99 && python -m venv external/envs/self-rag && external/envs/self-rag/bin/pip install -r external/self-rag/requirements.txt",
+  "isolation": "Use a dedicated virtual environment under external/envs/self-rag or a container; do not install Self-RAG dependencies into the project test environment.",
+  "model_retriever_requirements": [
+    "Official Self-RAG model or compatible checkpoints downloaded outside Git.",
+    "Retriever/index resources required by the official release.",
+    "A JSON-stdin runner wrapper that calls the official Self-RAG code at the pinned commit."
+  ],
+  "required_credentials": [
+    "HF_TOKEN"
+  ],
+  "supported_execution_modes": [
+    "controlled",
+    "native"
+  ],
+  "expected_output_mapping": {
+    "stdin": "JSON object with baseline_id, comparison_mode, session_id, query, target_time, evidence, budgets, and native_config.",
+    "stdout": "JSON object. Required: answer or final_answer. Optional: predicted_state/state, confidence, predicted_hypothesis_id, citation_supported, input_tokens, output_tokens, cost_usd.",
+    "answer": "PredictionRecord.answer is stored in metadata.native_execution.raw_output and evaluated externally.",
+    "state": "Native state is recorded only when emitted by the runner. Otherwise predicted_state remains null and state_source is unsupported.",
+    "citations": "Runner must keep any citation support tied to exact provided evidence chunks in controlled mode."
+  },
+  "default_command": [],
+  "readiness_notes": "The official repository does not provide this repo's JSON-stdin contract. Configure runner_command to a local wrapper inside the pinned Self-RAG checkout. The wrapper must not download model weights during tests.",
+  "state_support": {
+    "active": "native answer generation",
+    "abstain": "native only if the wrapper maps official Self-RAG critique/no-support behavior to abstain",
+    "disputed": "unsupported",
+    "evolution": "unsupported",
+    "unknown": "evaluator_derived when no native state is emitted"
+  }
+}

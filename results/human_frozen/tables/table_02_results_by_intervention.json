@@ -1,0 +1,897 @@
+{
+  "columns": [
+    "intervention",
+    "baseline",
+    "n",
+    "accuracy",
+    "accuracy_ci_low",
+    "accuracy_ci_high",
+    "coverage",
+    "coverage_ci_low",
+    "coverage_ci_high"
+  ],
+  "not_applicable": {
+    "concurrent_disagreement|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "concurrent_disagreement|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "evidence_removal|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "evidence_removal|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "expired_evidence|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "expired_evidence|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "insufficient_evidence_nei|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "insufficient_evidence_nei|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "order_reversal|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "order_reversal|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "repeated_weak_assertion|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "repeated_weak_assertion|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "retroactive_correction|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "retroactive_correction|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "supported_genuine_update|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "supported_genuine_update|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "temporal_evolution|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "temporal_evolution|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "unsupported_late_assertion|naive_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    },
+    "unsupported_late_assertion|stateless_rag": {
+      "accuracy": "a predicted revision state, which this system does not emit",
+      "coverage": "a predicted revision state, which this system does not emit"
+    }
+  },
+  "rows": [
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "concurrent_disagreement",
+      "n": 16
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "concurrent_disagreement",
+      "n": 16
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "concurrent_disagreement",
+      "n": 16
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "concurrent_disagreement",
+      "n": 16
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 0.25,
+      "coverage_ci_high": 0.625,
+      "coverage_ci_low": 0.0,
+      "intervention": "concurrent_disagreement",
+      "n": 16
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "coverage": 0.75,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.375,
+      "intervention": "concurrent_disagreement",
+      "n": 16
+    },
+    {
+      "accuracy": 0.9,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.8,
+      "baseline": "river_l",
+      "coverage": 0.975,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.925,
+      "intervention": "concurrent_disagreement",
+      "n": 80
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "evidence_removal",
+      "n": 66
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "evidence_removal",
+      "n": 66
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "evidence_removal",
+      "n": 66
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "evidence_removal",
+      "n": 66
+    },
+    {
+      "accuracy": 0.4696969696969697,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.42424242424242425,
+      "baseline": "minicheck_no_revision",
+      "coverage": 0.4696969696969697,
+      "coverage_ci_high": 0.5,
+      "coverage_ci_low": 0.42424242424242425,
+      "intervention": "evidence_removal",
+      "n": 66
+    },
+    {
+      "accuracy": 0.9696969696969697,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.9242424242424242,
+      "baseline": "river_d",
+      "coverage": 0.5,
+      "coverage_ci_high": 0.5,
+      "coverage_ci_low": 0.5,
+      "intervention": "evidence_removal",
+      "n": 66
+    },
+    {
+      "accuracy": 0.9666666666666667,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.9212121212121213,
+      "baseline": "river_l",
+      "coverage": 0.503030303030303,
+      "coverage_ci_high": 0.509090909090909,
+      "coverage_ci_low": 0.5,
+      "intervention": "evidence_removal",
+      "n": 330
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "expired_evidence",
+      "n": 52
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "expired_evidence",
+      "n": 52
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "expired_evidence",
+      "n": 52
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "expired_evidence",
+      "n": 52
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "expired_evidence",
+      "n": 52
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 1.0,
+      "baseline": "river_d",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "expired_evidence",
+      "n": 52
+    },
+    {
+      "accuracy": 1.0,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 1.0,
+      "baseline": "river_l",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "expired_evidence",
+      "n": 260
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "insufficient_evidence_nei",
+      "n": 24
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "insufficient_evidence_nei",
+      "n": 24
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "insufficient_evidence_nei",
+      "n": 24
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "insufficient_evidence_nei",
+      "n": 24
+    },
+    {
+      "accuracy": 0.5833333333333334,
+      "accuracy_ci_high": 0.8333333333333334,
+      "accuracy_ci_low": 0.3333333333333333,
+      "baseline": "minicheck_no_revision",
+      "coverage": 0.4166666666666667,
+      "coverage_ci_high": 0.6666666666666666,
+      "coverage_ci_low": 0.16666666666666666,
+      "intervention": "insufficient_evidence_nei",
+      "n": 24
+    },
+    {
+      "accuracy": 0.08333333333333333,
+      "accuracy_ci_high": 0.25,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "coverage": 0.9166666666666666,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.75,
+      "intervention": "insufficient_evidence_nei",
+      "n": 24
+    },
+    {
+      "accuracy": 0.9166666666666666,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.75,
+      "baseline": "river_l",
+      "coverage": 0.08333333333333333,
+      "coverage_ci_high": 0.25,
+      "coverage_ci_low": 0.0,
+      "intervention": "insufficient_evidence_nei",
+      "n": 120
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "order_reversal",
+      "n": 58
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "order_reversal",
+      "n": 58
+    },
+    {
+      "accuracy": 0.4827586206896552,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.4482758620689655,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "order_reversal",
+      "n": 58
+    },
+    {
+      "accuracy": 0.4827586206896552,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.4482758620689655,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "order_reversal",
+      "n": 58
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 0.8275862068965517,
+      "coverage_ci_high": 0.9655172413793104,
+      "coverage_ci_low": 0.6896551724137931,
+      "intervention": "order_reversal",
+      "n": 58
+    },
+    {
+      "accuracy": 0.06896551724137931,
+      "accuracy_ci_high": 0.1724137931034483,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "coverage": 0.06896551724137931,
+      "coverage_ci_high": 0.1724137931034483,
+      "coverage_ci_low": 0.0,
+      "intervention": "order_reversal",
+      "n": 58
+    },
+    {
+      "accuracy": 0.5517241379310345,
+      "accuracy_ci_high": 0.696551724137931,
+      "accuracy_ci_low": 0.4068965517241379,
+      "baseline": "river_l",
+      "coverage": 0.903448275862069,
+      "coverage_ci_high": 0.9862068965517241,
+      "coverage_ci_low": 0.8,
+      "intervention": "order_reversal",
+      "n": 290
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "repeated_weak_assertion",
+      "n": 10
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "repeated_weak_assertion",
+      "n": 10
+    },
+    {
+      "accuracy": 0.3,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.1,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "repeated_weak_assertion",
+      "n": 10
+    },
+    {
+      "accuracy": 0.3,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.1,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "repeated_weak_assertion",
+      "n": 10
+    },
+    {
+      "accuracy": 0.2,
+      "accuracy_ci_high": 0.6,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 0.4,
+      "coverage_ci_high": 0.8,
+      "coverage_ci_low": 0.0,
+      "intervention": "repeated_weak_assertion",
+      "n": 10
+    },
+    {
+      "accuracy": 0.4,
+      "accuracy_ci_high": 0.8,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "coverage": 0.8,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.4,
+      "intervention": "repeated_weak_assertion",
+      "n": 10
+    },
+    {
+      "accuracy": 0.3,
+      "accuracy_ci_high": 0.58,
+      "accuracy_ci_low": 0.02,
+      "baseline": "river_l",
+      "coverage": 0.98,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.94,
+      "intervention": "repeated_weak_assertion",
+      "n": 50
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "retroactive_correction",
+      "n": 2
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "retroactive_correction",
+      "n": 2
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "retroactive_correction",
+      "n": 2
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "retroactive_correction",
+      "n": 2
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "retroactive_correction",
+      "n": 2
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "river_d",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "retroactive_correction",
+      "n": 2
+    },
+    {
+      "accuracy": 0.4,
+      "accuracy_ci_high": 0.4,
+      "accuracy_ci_low": 0.4,
+      "baseline": "river_l",
+      "coverage": 0.9,
+      "coverage_ci_high": 0.9,
+      "coverage_ci_low": 0.9,
+      "intervention": "retroactive_correction",
+      "n": 10
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "supported_genuine_update",
+      "n": 6
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "supported_genuine_update",
+      "n": 6
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "supported_genuine_update",
+      "n": 6
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "supported_genuine_update",
+      "n": 6
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "supported_genuine_update",
+      "n": 6
+    },
+    {
+      "accuracy": 0.6666666666666666,
+      "accuracy_ci_high": 1.0,
+      "accuracy_ci_low": 0.5,
+      "baseline": "river_d",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "supported_genuine_update",
+      "n": 6
+    },
+    {
+      "accuracy": 0.5,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.5,
+      "baseline": "river_l",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "supported_genuine_update",
+      "n": 30
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "temporal_evolution",
+      "n": 6
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "temporal_evolution",
+      "n": 6
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "temporal_evolution",
+      "n": 6
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "temporal_evolution",
+      "n": 6
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "temporal_evolution",
+      "n": 6
+    },
+    {
+      "accuracy": 0.0,
+      "accuracy_ci_high": 0.0,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "coverage": 0.6666666666666666,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.0,
+      "intervention": "temporal_evolution",
+      "n": 6
+    },
+    {
+      "accuracy": 0.13333333333333333,
+      "accuracy_ci_high": 0.4,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_l",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "temporal_evolution",
+      "n": 30
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "naive_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "unsupported_late_assertion",
+      "n": 8
+    },
+    {
+      "accuracy": null,
+      "accuracy_ci_high": null,
+      "accuracy_ci_low": null,
+      "baseline": "stateless_rag",
+      "coverage": null,
+      "coverage_ci_high": null,
+      "coverage_ci_low": null,
+      "intervention": "unsupported_late_assertion",
+      "n": 8
+    },
+    {
+      "accuracy": 0.375,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.125,
+      "baseline": "last_write_wins",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "unsupported_late_assertion",
+      "n": 8
+    },
+    {
+      "accuracy": 0.375,
+      "accuracy_ci_high": 0.5,
+      "accuracy_ci_low": 0.125,
+      "baseline": "recency_weighted",
+      "coverage": 1.0,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 1.0,
+      "intervention": "unsupported_late_assertion",
+      "n": 8
+    },
+    {
+      "accuracy": 0.25,
+      "accuracy_ci_high": 0.75,
+      "accuracy_ci_low": 0.0,
+      "baseline": "minicheck_no_revision",
+      "coverage": 0.25,
+      "coverage_ci_high": 0.75,
+      "coverage_ci_low": 0.0,
+      "intervention": "unsupported_late_assertion",
+      "n": 8
+    },
+    {
+      "accuracy": 0.25,
+      "accuracy_ci_high": 0.75,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_d",
+      "coverage": 0.5,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.0,
+      "intervention": "unsupported_late_assertion",
+      "n": 8
+    },
+    {
+      "accuracy": 0.175,
+      "accuracy_ci_high": 0.375,
+      "accuracy_ci_low": 0.0,
+      "baseline": "river_l",
+      "coverage": 0.95,
+      "coverage_ci_high": 1.0,
+      "coverage_ci_low": 0.85,
+      "intervention": "unsupported_late_assertion",
+      "n": 40
+    }
+  ],
+  "spec": {
+    "caption": "Per-intervention revision accuracy and coverage.",
+    "comparison_mode": "controlled",
+    "conditional_on": null,
+    "confidence_intervals": "95% bootstrap confidence intervals over paired examples where pair_id is available; otherwise over example-level rows.",
+    "directions": {
+      "accuracy": "higher",
+      "coverage": "higher"
+    },
+    "family_number": 2,
+    "filters": "controlled rows grouped by intervention and baseline",
+    "footnotes": [
+      "Each intervention row is computed only from examples carrying that intervention label."
+    ],
+    "grouping": [
+      "intervention",
+      "baseline"
+    ],
+    "minimum_required_data": "At least one labelled row for each reported intervention-baseline group.",
+    "required_columns": [
+      "intervention",
+      "baseline",
+      "comparison_mode",
+      "gold_state",
+      "predicted_state"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "results_by_intervention",
+    "title": "Results by intervention"
+  }
+}

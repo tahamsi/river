@@ -1,0 +1,208 @@
+{
+  "columns": [
+    "baseline",
+    "gold_state",
+    "predicted_disputed",
+    "predicted_evolution",
+    "predicted_other",
+    "n"
+  ],
+  "not_applicable": {},
+  "rows": [
+    {
+      "baseline": "naive_rag",
+      "gold_state": "disputed",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "naive_rag",
+      "gold_state": "evolution",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "naive_rag",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "stateless_rag",
+      "gold_state": "disputed",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "stateless_rag",
+      "gold_state": "evolution",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "stateless_rag",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "last_write_wins",
+      "gold_state": "disputed",
+      "n": 16,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 16
+    },
+    {
+      "baseline": "last_write_wins",
+      "gold_state": "evolution",
+      "n": 6,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 6
+    },
+    {
+      "baseline": "last_write_wins",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "recency_weighted",
+      "gold_state": "disputed",
+      "n": 16,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 16
+    },
+    {
+      "baseline": "recency_weighted",
+      "gold_state": "evolution",
+      "n": 6,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 6
+    },
+    {
+      "baseline": "recency_weighted",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "minicheck_no_revision",
+      "gold_state": "disputed",
+      "n": 16,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 16
+    },
+    {
+      "baseline": "minicheck_no_revision",
+      "gold_state": "evolution",
+      "n": 6,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 6
+    },
+    {
+      "baseline": "minicheck_no_revision",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "river_d",
+      "gold_state": "disputed",
+      "n": 16,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 16
+    },
+    {
+      "baseline": "river_d",
+      "gold_state": "evolution",
+      "n": 6,
+      "predicted_disputed": 2,
+      "predicted_evolution": 0,
+      "predicted_other": 4
+    },
+    {
+      "baseline": "river_d",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    },
+    {
+      "baseline": "river_l",
+      "gold_state": "disputed",
+      "n": 80,
+      "predicted_disputed": 72,
+      "predicted_evolution": 0,
+      "predicted_other": 8
+    },
+    {
+      "baseline": "river_l",
+      "gold_state": "evolution",
+      "n": 30,
+      "predicted_disputed": 0,
+      "predicted_evolution": 4,
+      "predicted_other": 26
+    },
+    {
+      "baseline": "river_l",
+      "gold_state": "other",
+      "n": 0,
+      "predicted_disputed": 0,
+      "predicted_evolution": 0,
+      "predicted_other": 0
+    }
+  ],
+  "spec": {
+    "caption": "Confusion matrix separating concurrent disagreement from temporal evolution.",
+    "comparison_mode": "controlled",
+    "conditional_on": null,
+    "confidence_intervals": "95% bootstrap confidence intervals over paired examples where pair_id is available; otherwise over example-level rows.",
+    "directions": {},
+    "family_number": 10,
+    "filters": "controlled concurrent_disagreement and temporal_evolution rows",
+    "footnotes": [
+      "Cells are raw counts, not rates."
+    ],
+    "grouping": [
+      "baseline",
+      "gold_state"
+    ],
+    "minimum_required_data": "Conflict and evolution labelled rows.",
+    "required_columns": [
+      "gold_state",
+      "predicted_state",
+      "intervention",
+      "baseline",
+      "comparison_mode"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "conflict_versus_temporal_evolution",
+    "title": "Conflict versus temporal evolution"
+  }
+}

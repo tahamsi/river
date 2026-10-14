@@ -1,0 +1,37 @@
+{
+  "baseline_id": "graphrag_local",
+  "display_name": "Microsoft GraphRAG Local Search",
+  "official_repository_url": "https://github.com/microsoft/graphrag",
+  "commit_or_tag": "14a00ad88fc33cf2b52f4f113f25807556f8e25e",
+  "paper_reference": "Microsoft Research, From Local to Global: A Graph RAG Approach to Query-Focused Summarization.",
+  "license": "MIT",
+  "installation_command": "git clone https://github.com/microsoft/graphrag.git external/graphrag && git -C external/graphrag checkout 14a00ad88fc33cf2b52f4f113f25807556f8e25e && python -m venv external/envs/graphrag && external/envs/graphrag/bin/pip install graphrag",
+  "isolation": "Use a dedicated virtual environment under external/envs/graphrag or a container. Microsoft GraphRAG supports Python 3.10-3.12; this project targets a different runtime.",
+  "model_retriever_requirements": [
+    "Official Microsoft GraphRAG index built outside version-controlled processed outputs.",
+    "Local-search configuration routed through Ollama or another local OpenAI-compatible endpoint.",
+    "A JSON-stdin runner wrapper that invokes local search at the pinned commit."
+  ],
+  "required_credentials": [
+    "LOCAL_LLM_BASE_URL"
+  ],
+  "supported_execution_modes": [
+    "controlled",
+    "native"
+  ],
+  "expected_output_mapping": {
+    "stdin": "JSON object with baseline_id, comparison_mode, session_id, query, target_time, evidence, budgets, and native_config.",
+    "stdout": "JSON object. Required: answer or final_answer. Optional: predicted_state/state, confidence, predicted_hypothesis_id, citation_supported, input_tokens, output_tokens, cost_usd.",
+    "native": "Wrapper should call the official local search pipeline over a prebuilt GraphRAG index.",
+    "controlled": "Wrapper may ingest the common evidence into a temporary official GraphRAG index when technically valid."
+  },
+  "default_command": [],
+  "readiness_notes": "GraphRAG indexing can be expensive and must be explicit. Local-model support uses the upstream LiteLLM/proxy path and requires reliable structured JSON output.",
+  "state_support": {
+    "active": "native answer generation",
+    "abstain": "unsupported unless the wrapper maps an official no-answer signal",
+    "disputed": "unsupported",
+    "evolution": "unsupported",
+    "unknown": "evaluator_derived when no native state is emitted"
+  }
+}

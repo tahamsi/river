@@ -1,0 +1,16 @@
+{
+  "condition": "river_d_no_contradiction",
+  "ablation": "minus_contradiction",
+  "mechanism": "contradiction_penalty",
+  "support_threshold": 0.6,
+  "margin_threshold": 0.15,
+  "abstention_threshold": 0.3,
+  "contradiction_penalty": 1.0,
+  "use_valid_time": true,
+  "use_independence_discount": true,
+  "use_contradiction": false,
+  "use_provenance": true,
+  "allow_abstention": true,
+  "use_decision_margin": true,
+  "use_arrival_as_truth_feature": false
+}

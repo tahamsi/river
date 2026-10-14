@@ -1,0 +1,37 @@
+{
+  "baseline_id": "memgpt",
+  "display_name": "MemGPT / Letta",
+  "official_repository_url": "https://github.com/letta-ai/letta",
+  "commit_or_tag": "b76da9092518cbaa2d09042e52fdcbde69243e18",
+  "paper_reference": "Packer et al., MemGPT: Towards LLMs as Operating Systems, and the Letta open-source implementation.",
+  "license": "Apache-2.0",
+  "installation_command": "git clone https://github.com/letta-ai/letta.git external/letta && git -C external/letta checkout b76da9092518cbaa2d09042e52fdcbde69243e18 && python -m venv external/envs/letta && external/envs/letta/bin/pip install -e external/letta",
+  "isolation": "Use a dedicated virtual environment under external/envs/letta or a container. Keep server state and agent memory under external/ or artifacts/, not Git.",
+  "model_retriever_requirements": [
+    "Official Letta server/client at the pinned commit.",
+    "Configured local Ollama/vLLM provider and memory store.",
+    "A JSON-stdin runner wrapper that creates or reuses a pinned native agent configuration."
+  ],
+  "required_credentials": [
+    "LOCAL_LLM_BASE_URL"
+  ],
+  "supported_execution_modes": [
+    "controlled",
+    "native"
+  ],
+  "expected_output_mapping": {
+    "stdin": "JSON object with baseline_id, comparison_mode, session_id, query, target_time, evidence, budgets, and native_config.",
+    "stdout": "JSON object. Required: answer or final_answer. Optional: predicted_state/state, confidence, predicted_hypothesis_id, citation_supported, input_tokens, output_tokens, cost_usd.",
+    "native": "Wrapper should run a native Letta/MemGPT agent with official memory behavior.",
+    "controlled": "Wrapper may load only the common evidence into the official memory substrate before answering."
+  },
+  "default_command": [],
+  "readiness_notes": "Native memory server startup and persistent state cleanup are outside tests. Hosted model providers are not permitted by this plan.",
+  "state_support": {
+    "active": "native answer generation",
+    "abstain": "unsupported unless the agent explicitly refuses or emits no-answer",
+    "disputed": "unsupported unless a custom official-agent state is emitted by the wrapper",
+    "evolution": "unsupported",
+    "unknown": "evaluator_derived when no native state is emitted"
+  }
+}

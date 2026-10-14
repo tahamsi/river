@@ -1,0 +1,10 @@
+last_write_wins_test_seed42.jsonl: 98/157 strict direct answers correct (0.624); 0 contract violations; 0 unmatched rows
+naive_rag_test_seed42.jsonl: 107/157 strict direct answers correct (0.682); 0 contract violations; 0 unmatched rows
+recency_weighted_test_seed42.jsonl: 98/157 strict direct answers correct (0.624); 0 contract violations; 0 unmatched rows
+river_d_test_seed42.jsonl: 99/157 strict direct answers correct (0.631); 0 contract violations; 0 unmatched rows
+river_l_test_seed101.jsonl: 126/157 strict direct answers correct (0.803); 0 contract violations; 0 unmatched rows
+river_l_test_seed11.jsonl: 123/157 strict direct answers correct (0.783); 0 contract violations; 0 unmatched rows
+river_l_test_seed202.jsonl: 130/157 strict direct answers correct (0.828); 0 contract violations; 0 unmatched rows
+river_l_test_seed314.jsonl: 125/157 strict direct answers correct (0.796); 0 contract violations; 0 unmatched rows
+river_l_test_seed42.jsonl: 125/157 strict direct answers correct (0.796); 0 contract violations; 0 unmatched rows
+stateless_rag_test_seed42.jsonl: 107/157 strict direct answers correct (0.682); 0 contract violations; 0 unmatched rows

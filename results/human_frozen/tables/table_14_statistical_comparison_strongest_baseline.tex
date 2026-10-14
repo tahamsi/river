@@ -1,0 +1,10 @@
+\begin{table}
+\centering
+\caption{Paired statistical comparison against the strongest non-RIVER baseline.}
+\begin{tabular}{llllllllllll}
+candidate & reference & metric & estimate & ci\_low & ci\_high & mcnemar\_p & mcnemar\_p\_holm & permutation\_p & permutation\_p\_holm & cohen\_dz & n \\ \hline
+river\_d & last\_write\_wins & revision\_accuracy\_difference & 0.146 & 0.069 & 0.224 & 0.000 & 0.000 & 0.000 & 0.000 & 0.243 & 246 \\
+river\_l & last\_write\_wins & revision\_accuracy\_difference & \textbf{0.386} & 0.309 & 0.459 & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & \textbf{0.636} & 246 \\
+\end{tabular}
+\footnotesize{The strongest baseline is selected by answer-or-revision accuracy, excluding RIVER variants.}
+\end{table}

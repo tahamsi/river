@@ -1,0 +1,69 @@
+{
+  "annotation_workbook": {
+    "filename": "RIVER_Bench_Human_Annotation_Workbook_1780_Completed Correct Version - Copy.xlsx",
+    "label_rows": 1780,
+    "pair_rows": 890,
+    "sha256": "sha256:4fcbf5843411a9301b85010bdcd3088d055083a63404e899c8b4b4701aa15b23"
+  },
+  "counts": {
+    "by_intervention": {
+      "concurrent_disagreement": 148,
+      "evidence_removal": 388,
+      "expired_evidence": 314,
+      "insufficient_evidence_nei": 142,
+      "order_reversal": 368,
+      "repeated_weak_assertion": 36,
+      "retroactive_correction": 6,
+      "supported_genuine_update": 38,
+      "temporal_evolution": 40,
+      "unsupported_late_assertion": 22
+    },
+    "by_split": {
+      "dev": 254,
+      "test": 248,
+      "train": 1000
+    },
+    "by_state": {
+      "abstain": 350,
+      "active": 950,
+      "disputed": 147,
+      "evolution": 35,
+      "unknown": 20
+    },
+    "excluded_examples": 278,
+    "excluded_pairs": 139,
+    "excluded_pairs_by_primary_reason": {
+      "construction_reject": 121,
+      "pair_label_inconsistency": 14,
+      "unresolved_label": 4
+    },
+    "frozen_examples": 1502,
+    "frozen_pairs": 751,
+    "input_examples": 1780,
+    "input_pairs": 890,
+    "unresolved_input_rows": 31
+  },
+  "created_at": "2026-09-20T20:53:55.397347+00:00",
+  "freeze_policy": {
+    "include_when": "Pair QA status is Ready, both labels are clear, and construction is not rejected",
+    "labels": "Human state and active hypothesis replace provisional generated gold",
+    "source_scores": "Existing measured NLI verifier scores are retained; no new source data are introduced",
+    "unit": "pair"
+  },
+  "input_sha256": {
+    "data/grounded_expired_nli/river_bench_dev.jsonl": "sha256:f2e48f3f7e197727090a310618aef02a577784fdcde3271b8349d84915b4cce7",
+    "data/grounded_expired_nli/river_bench_test.jsonl": "sha256:ea38a0b8ff9c8f9cc56cb949e608078e7693634503c674d2fb62d27300559292",
+    "data/grounded_expired_nli/river_bench_train.jsonl": "sha256:f77ce5006cf156c826f774fbbaedd6012d80f06760ab26088a0e8ad093987a8d",
+    "data/grounded_nli/river_bench_dev.jsonl": "sha256:53e353d72fd403dd8eac113eecba299a8231a68f64b5d03695fa2becc2342459",
+    "data/grounded_nli/river_bench_test.jsonl": "sha256:a45d7d26d60c5b84ae735aaa6ca585b5037f5db673a762c656cf8ad51adede1a",
+    "data/grounded_nli/river_bench_train.jsonl": "sha256:ee1eb5e6c1bfbaa3a093278a06f5b3c899d6893be74bd135204e0811aa0f340f"
+  },
+  "output_sha256": {
+    "adjudication_ledger.jsonl": "sha256:ae1c14e77264012802a477276c608790073fb2d8794c5d7601d16cc34fa0290d",
+    "river_bench_1502.jsonl": "sha256:52ff3ffc0a3f0beac41a1f1fb2100c2f27fc1a3a380463deaac44376b84993ea",
+    "river_bench_dev.jsonl": "sha256:a8627d785a0878855d59cc117d8f2cecdb0de11c6f3b614bc9c849b569c177f5",
+    "river_bench_test.jsonl": "sha256:ac42915c30444ec90bbad1c84555c4086a99dbc3f2688219183d91e27eb1666d",
+    "river_bench_train.jsonl": "sha256:90c80e3d3f83966462802bd67bfa0e27c574be32f03b851fb704163b40f8d18a"
+  },
+  "schema_version": "river-bench-grounded-v4-human-frozen"
+}

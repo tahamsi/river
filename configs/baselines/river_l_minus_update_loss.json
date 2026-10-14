@@ -1,0 +1,1 @@
+{"checkpoint": "artifacts/river_l_merged_ablations/river_l_minus_update_loss.pt", "device": "cuda", "condition": "river_l_minus_update_loss", "ablation": "minus_update_loss"}

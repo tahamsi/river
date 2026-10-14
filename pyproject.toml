@@ -1,0 +1,56 @@
+[project]
+name = "river"
+version = "1.0.0"
+description = "Recency-invariant, validity-sensitive evidence revision for retrieval-augmented generation"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+dependencies = [
+    "datasets>=4.8.4",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.2",
+    "openai>=1.0.0",
+    "pandas>=2.0.0,<3",
+    "pydantic>=2.12.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["river", "river_bench", "experiments", "analysis", "scripts"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0", "pytest-cov>=5.0", "torch"]
+learned = ["torch"]
+nli = ["transformers>=4.40", "torch"]
+minicheck = [
+    "minicheck @ git+https://github.com/Liyan06/MiniCheck.git@b58b9fa69acbd1015ec970fa65dd752413a053d2",
+    "accelerate",
+]
+
+[project.scripts]
+river-run = "experiments.run:main"
+river-download = "scripts.benchmark.download_all_datasets:main"
+river-build-source-corpus = "scripts.benchmark.build_river_bench_1800:main"
+river-bench = "river_bench.river_bench:main"
+river-evaluate = "river.evaluation.cli:main"
+river-tables = "analysis.generate_tables:main"
+river-l-train = "river.learned.train:main"
+river-l-validate = "river.learned.validate:main"
+river-native-baselines = "river.baselines.native_cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "slow: optional tests requiring local weights or slow inference",
+    "native: optional tests requiring installed native external systems",
+]

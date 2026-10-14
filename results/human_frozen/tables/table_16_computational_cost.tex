@@ -1,0 +1,16 @@
+\begin{table}
+\centering
+\caption{Computational cost and telemetry.}
+\begin{tabular}{llllllllllllllllllllllll}
+comparison\_mode & baseline & n & latency\_ms & latency\_ms\_ci\_low & latency\_ms\_ci\_high & revision\_latency\_ms & revision\_latency\_ms\_ci\_low & revision\_latency\_ms\_ci\_high & tokens & tokens\_ci\_low & tokens\_ci\_high & model\_calls & model\_calls\_ci\_low & model\_calls\_ci\_high & nli\_calls & nli\_calls\_ci\_low & nli\_calls\_ci\_high & peak\_memory\_mb & peak\_memory\_mb\_ci\_low & peak\_memory\_mb\_ci\_high & estimated\_cost & estimated\_cost\_ci\_low & estimated\_cost\_ci\_high \\ \hline
+controlled & naive\_rag & 248 & 653.278 & 618.397 & 691.156 & \textbf{0.035} & 0.034 & 0.037 & 252.992 & 243.714 & 263.351 & 1.000 & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 & 0.002 & 0.002 & 0.002 & \textbf{0.000} & 0.000 & 0.000 \\
+controlled & stateless\_rag & 248 & 604.676 & 572.191 & 639.282 & 0.037 & 0.036 & 0.039 & 252.992 & 243.714 & 263.351 & 1.000 & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 & 0.002 & 0.002 & 0.002 & \textbf{0.000} & 0.000 & 0.000 \\
+controlled & last\_write\_wins & 248 & 555.841 & 519.235 & 594.766 & 0.053 & 0.048 & 0.062 & 300.391 & 291.984 & 309.036 & 1.000 & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 & 0.002 & 0.001 & 0.002 & \textbf{0.000} & 0.000 & 0.000 \\
+controlled & recency\_weighted & 248 & 566.398 & 531.884 & 602.082 & 0.069 & 0.056 & 0.089 & 300.391 & 291.984 & 309.036 & 1.000 & 1.000 & 1.000 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.002} & 0.001 & 0.002 & \textbf{0.000} & 0.000 & 0.000 \\
+controlled & minicheck\_no\_revision & 248 & \textbf{55.468} & 48.619 & 66.971 & 55.135 & 48.304 & 66.614 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 & 1.117 & 1.028 & 1.210 & 0.051 & 0.034 & 0.084 & NA & NA & NA \\
+controlled & river\_d & 248 & 371.130 & 321.507 & 422.453 & 0.289 & 0.282 & 0.296 & 175.226 & 152.468 & 198.000 & 0.581 & 0.508 & 0.657 & \textbf{0.000} & 0.000 & 0.000 & 0.008 & 0.007 & 0.008 & \textbf{0.000} & 0.000 & 0.000 \\
+controlled & river\_l & 1240 & 400.275 & 362.502 & 437.653 & 21.866 & 20.809 & 22.993 & 186.896 & 167.961 & 205.515 & 0.635 & 0.569 & 0.700 & \textbf{0.000} & 0.000 & 0.000 & 0.005 & 0.005 & 0.005 & \textbf{0.000} & 0.000 & 0.000 \\
+\end{tabular}
+\footnotesize{Unavailable telemetry is reported as missing rather than zero.}
+\footnotesize{estimated\_cost is not applicable for controlled / minicheck\_no\_revision: it needs recorded generation cost metadata, which this system run did not produce (for example, a --no-generation run).}
+\end{table}

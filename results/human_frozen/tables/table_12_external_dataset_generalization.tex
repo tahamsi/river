@@ -1,0 +1,53 @@
+\begin{table}
+\centering
+\caption{Generalization across external datasets.}
+\begin{tabular}{lllllllllllll}
+comparison\_mode & source\_dataset & baseline & n & accuracy & accuracy\_ci\_low & accuracy\_ci\_high & rfr & rfr\_ci\_low & rfr\_ci\_high & abstention\_f1 & abstention\_f1\_ci\_low & abstention\_f1\_ci\_high \\ \hline
+controlled & 2wikimultihopqa & naive\_rag & 58 & NA & NA & NA & 0.095 & 0.000 & 0.238 & NA & NA & NA \\
+controlled & 2wikimultihopqa & stateless\_rag & 58 & NA & NA & NA & 0.095 & 0.000 & 0.238 & NA & NA & NA \\
+controlled & 2wikimultihopqa & last\_write\_wins & 58 & 0.483 & 0.448 & 0.500 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 \\
+controlled & 2wikimultihopqa & recency\_weighted & 58 & 0.483 & 0.448 & 0.500 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 \\
+controlled & 2wikimultihopqa & minicheck\_no\_revision & 58 & 0.000 & 0.000 & 0.000 & \textbf{0.000} & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+controlled & 2wikimultihopqa & river\_d & 58 & 0.069 & 0.000 & 0.172 & \textbf{0.000} & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+controlled & 2wikimultihopqa & river\_l & 290 & 0.552 & 0.407 & 0.697 & \textbf{0.000} & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+controlled & fever & naive\_rag & 24 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & fever & stateless\_rag & 24 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & fever & last\_write\_wins & 24 & 0.000 & 0.000 & 0.000 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & fever & recency\_weighted & 24 & 0.000 & 0.000 & 0.000 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & fever & minicheck\_no\_revision & 24 & 0.583 & 0.333 & 0.833 & NA & NA & NA & 0.737 & 0.500 & 0.909 \\
+controlled & fever & river\_d & 24 & 0.083 & 0.000 & 0.250 & NA & NA & NA & 0.154 & 0.000 & 0.400 \\
+controlled & fever & river\_l & 120 & 0.917 & 0.750 & 1.000 & NA & NA & NA & 0.957 & 0.857 & 1.000 \\
+controlled & longmemeval & naive\_rag & 12 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & longmemeval & stateless\_rag & 12 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & longmemeval & last\_write\_wins & 12 & 0.250 & 0.083 & 0.417 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & longmemeval & recency\_weighted & 12 & 0.250 & 0.083 & 0.417 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & longmemeval & minicheck\_no\_revision & 12 & 0.000 & 0.000 & 0.000 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & longmemeval & river\_d & 12 & 0.333 & 0.083 & 0.667 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & longmemeval & river\_l & 60 & 0.317 & 0.150 & 0.483 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & pat\_questions & naive\_rag & 118 & NA & NA & NA & 0.739 & 0.545 & 0.909 & NA & NA & NA \\
+controlled & pat\_questions & stateless\_rag & 118 & NA & NA & NA & 0.739 & 0.545 & 0.909 & NA & NA & NA \\
+controlled & pat\_questions & last\_write\_wins & 118 & 0.500 & 0.500 & 0.500 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 \\
+controlled & pat\_questions & recency\_weighted & 118 & 0.500 & 0.500 & 0.500 & 1.000 & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 \\
+controlled & pat\_questions & minicheck\_no\_revision & 118 & 0.263 & 0.195 & 0.322 & \textbf{0.000} & 0.000 & 0.000 & 0.939 & 0.877 & 0.986 \\
+controlled & pat\_questions & river\_d & 118 & \textbf{0.983} & 0.958 & 1.000 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.969} & 0.915 & 1.000 \\
+controlled & pat\_questions & river\_l & 590 & 0.981 & 0.956 & 1.000 & \textbf{0.000} & 0.000 & 0.000 & 0.966 & 0.913 & 1.000 \\
+controlled & wikicontradict & naive\_rag & 34 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & wikicontradict & stateless\_rag & 34 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & wikicontradict & last\_write\_wins & 34 & 0.176 & 0.059 & 0.294 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikicontradict & recency\_weighted & 34 & 0.176 & 0.059 & 0.294 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikicontradict & minicheck\_no\_revision & 34 & 0.118 & 0.000 & 0.294 & NA & NA & NA & 0.267 & 0.000 & 0.533 \\
+controlled & wikicontradict & river\_d & 34 & 0.176 & 0.000 & 0.353 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikicontradict & river\_l & 170 & 0.553 & 0.359 & 0.741 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikipedia\_revision & naive\_rag & 2 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & wikipedia\_revision & stateless\_rag & 2 & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+controlled & wikipedia\_revision & last\_write\_wins & 2 & 0.500 & 0.500 & 0.500 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikipedia\_revision & recency\_weighted & 2 & 0.500 & 0.500 & 0.500 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikipedia\_revision & minicheck\_no\_revision & 2 & 0.000 & 0.000 & 0.000 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikipedia\_revision & river\_d & 2 & 0.500 & 0.500 & 0.500 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+controlled & wikipedia\_revision & river\_l & 10 & 0.400 & 0.400 & 0.400 & NA & NA & NA & 0.000 & 0.000 & 0.000 \\
+\end{tabular}
+\footnotesize{Authored unit fixtures and synthetic sources are refused for this table.}
+\footnotesize{abstention\_f1 is not applicable for 12 of 42 rows: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{accuracy is not applicable for 12 of 42 rows: it needs either a resolvable gold answer or a predicted revision state, and this group has neither.}
+\footnotesize{rfr is not applicable for 28 of 42 rows: it needs examples whose arrival order was reversed, of which this group contains none.}
+\end{table}

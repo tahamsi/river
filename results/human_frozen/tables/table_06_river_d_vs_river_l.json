@@ -1,0 +1,71 @@
+{
+  "columns": [
+    "baseline",
+    "n",
+    "rfr",
+    "rfr_ci_low",
+    "rfr_ci_high",
+    "ece",
+    "ece_ci_low",
+    "ece_ci_high",
+    "cost",
+    "cost_ci_low",
+    "cost_ci_high"
+  ],
+  "not_applicable": {},
+  "rows": [
+    {
+      "baseline": "river_d",
+      "cost": 0.0,
+      "cost_ci_high": 0.0,
+      "cost_ci_low": 0.0,
+      "ece": 0.2808422494575011,
+      "ece_ci_high": 0.3795263668495555,
+      "ece_ci_low": 0.1865610661611402,
+      "n": 246,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0
+    },
+    {
+      "baseline": "river_l",
+      "cost": 0.0,
+      "cost_ci_high": 0.0,
+      "cost_ci_low": 0.0,
+      "ece": 0.0558248445028212,
+      "ece_ci_high": 0.1061537653934665,
+      "ece_ci_low": 0.03110260401314836,
+      "n": 1230,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0
+    }
+  ],
+  "spec": {
+    "caption": "Direct deterministic-versus-learned RIVER comparison.",
+    "comparison_mode": "controlled",
+    "conditional_on": null,
+    "confidence_intervals": "95% bootstrap confidence intervals over paired examples where pair_id is available; otherwise over example-level rows.",
+    "directions": {
+      "cost": "lower",
+      "ece": "lower",
+      "rfr": "lower"
+    },
+    "family_number": 6,
+    "filters": "controlled rows where baseline is river_d or river_l",
+    "footnotes": [
+      "RIVER-L rows require a frozen checkpoint recorded in prediction metadata."
+    ],
+    "grouping": [
+      "baseline"
+    ],
+    "minimum_required_data": "Both river_d and river_l controlled predictions.",
+    "required_columns": [
+      "baseline",
+      "comparison_mode"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "river_d_vs_river_l",
+    "title": "RIVER-D versus RIVER-L"
+  }
+}

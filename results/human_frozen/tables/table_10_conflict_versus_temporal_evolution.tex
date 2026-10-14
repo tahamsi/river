@@ -1,0 +1,29 @@
+\begin{table}
+\centering
+\caption{Confusion matrix separating concurrent disagreement from temporal evolution.}
+\begin{tabular}{llllll}
+baseline & gold\_state & predicted\_disputed & predicted\_evolution & predicted\_other & n \\ \hline
+naive\_rag & disputed & 0 & 0 & 0 & 0 \\
+naive\_rag & evolution & 0 & 0 & 0 & 0 \\
+naive\_rag & other & 0 & 0 & 0 & 0 \\
+stateless\_rag & disputed & 0 & 0 & 0 & 0 \\
+stateless\_rag & evolution & 0 & 0 & 0 & 0 \\
+stateless\_rag & other & 0 & 0 & 0 & 0 \\
+last\_write\_wins & disputed & 0 & 0 & 16 & 16 \\
+last\_write\_wins & evolution & 0 & 0 & 6 & 6 \\
+last\_write\_wins & other & 0 & 0 & 0 & 0 \\
+recency\_weighted & disputed & 0 & 0 & 16 & 16 \\
+recency\_weighted & evolution & 0 & 0 & 6 & 6 \\
+recency\_weighted & other & 0 & 0 & 0 & 0 \\
+minicheck\_no\_revision & disputed & 0 & 0 & 16 & 16 \\
+minicheck\_no\_revision & evolution & 0 & 0 & 6 & 6 \\
+minicheck\_no\_revision & other & 0 & 0 & 0 & 0 \\
+river\_d & disputed & 0 & 0 & 16 & 16 \\
+river\_d & evolution & 2 & 0 & 4 & 6 \\
+river\_d & other & 0 & 0 & 0 & 0 \\
+river\_l & disputed & 72 & 0 & 8 & 80 \\
+river\_l & evolution & 0 & 4 & 26 & 30 \\
+river\_l & other & 0 & 0 & 0 & 0 \\
+\end{tabular}
+\footnotesize{Cells are raw counts, not rates.}
+\end{table}

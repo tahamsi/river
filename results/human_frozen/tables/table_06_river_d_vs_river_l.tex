@@ -1,0 +1,10 @@
+\begin{table}
+\centering
+\caption{Direct deterministic-versus-learned RIVER comparison.}
+\begin{tabular}{lllllllllll}
+baseline & n & rfr & rfr\_ci\_low & rfr\_ci\_high & ece & ece\_ci\_low & ece\_ci\_high & cost & cost\_ci\_low & cost\_ci\_high \\ \hline
+river\_d & 246 & \textbf{0.000} & 0.000 & 0.000 & 0.281 & 0.187 & 0.380 & \textbf{0.000} & 0.000 & 0.000 \\
+river\_l & 1230 & \textbf{0.000} & 0.000 & 0.000 & \textbf{0.056} & 0.031 & 0.106 & \textbf{0.000} & 0.000 & 0.000 \\
+\end{tabular}
+\footnotesize{RIVER-L rows require a frozen checkpoint recorded in prediction metadata.}
+\end{table}

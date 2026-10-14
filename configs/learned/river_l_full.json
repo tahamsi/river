@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "architecture": "deepsets",
+  "features": {
+    "use_temporal_features": true,
+    "include_arrival_feature": false,
+    "max_interval_days": 3650.0
+  },
+  "model": {
+    "hidden_dim": 32,
+    "state_count": 5,
+    "dropout": 0.0
+  },
+  "loss": {
+    "lambda_inv": 1.0,
+    "lambda_upd": 1.0,
+    "lambda_cal": 0.1
+  },
+  "learning_rate": 0.01,
+  "batch_size": 16,
+  "epochs": 100,
+  "early_stopping_patience": 10
+}

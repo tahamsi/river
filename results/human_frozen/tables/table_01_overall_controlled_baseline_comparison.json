@@ -1,0 +1,146 @@
+{
+  "columns": [
+    "baseline",
+    "n",
+    "answer_accuracy",
+    "answer_accuracy_ci_low",
+    "answer_accuracy_ci_high",
+    "rfr",
+    "rfr_ci_low",
+    "rfr_ci_high",
+    "usr",
+    "usr_ci_low",
+    "usr_ci_high"
+  ],
+  "not_applicable": {
+    "minicheck_no_revision": {
+      "answer_accuracy": "strict direct-answer labels produced under generation contract v2, which this system does not emit",
+      "usr": "a selected hypothesis this system named on at least one late-assertion row, which this system does not emit"
+    }
+  },
+  "rows": [
+    {
+      "answer_accuracy": 0.6858974358974359,
+      "answer_accuracy_ci_high": 0.7672955974842768,
+      "answer_accuracy_ci_low": 0.603448275862069,
+      "baseline": "naive_rag",
+      "n": 246,
+      "rfr": 0.4318181818181818,
+      "rfr_ci_high": 0.5789473684210527,
+      "rfr_ci_low": 0.2857142857142857,
+      "usr": 0.3333333333333333,
+      "usr_ci_high": 1.0,
+      "usr_ci_low": 0.0
+    },
+    {
+      "answer_accuracy": 0.6858974358974359,
+      "answer_accuracy_ci_high": 0.7672955974842768,
+      "answer_accuracy_ci_low": 0.603448275862069,
+      "baseline": "stateless_rag",
+      "n": 246,
+      "rfr": 0.4318181818181818,
+      "rfr_ci_high": 0.5789473684210527,
+      "rfr_ci_low": 0.2857142857142857,
+      "usr": 0.3333333333333333,
+      "usr_ci_high": 1.0,
+      "usr_ci_low": 0.0
+    },
+    {
+      "answer_accuracy": 0.6217948717948718,
+      "answer_accuracy_ci_high": 0.6623376623376623,
+      "answer_accuracy_ci_low": 0.5870967741935483,
+      "baseline": "last_write_wins",
+      "n": 246,
+      "rfr": 1.0,
+      "rfr_ci_high": 1.0,
+      "rfr_ci_low": 1.0,
+      "usr": 1.0,
+      "usr_ci_high": 1.0,
+      "usr_ci_low": 1.0
+    },
+    {
+      "answer_accuracy": 0.6217948717948718,
+      "answer_accuracy_ci_high": 0.6623376623376623,
+      "answer_accuracy_ci_low": 0.5870967741935483,
+      "baseline": "recency_weighted",
+      "n": 246,
+      "rfr": 1.0,
+      "rfr_ci_high": 1.0,
+      "rfr_ci_low": 1.0,
+      "usr": 1.0,
+      "usr_ci_high": 1.0,
+      "usr_ci_low": 1.0
+    },
+    {
+      "answer_accuracy": null,
+      "answer_accuracy_ci_high": null,
+      "answer_accuracy_ci_low": null,
+      "baseline": "minicheck_no_revision",
+      "n": 246,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "usr": null,
+      "usr_ci_high": null,
+      "usr_ci_low": null
+    },
+    {
+      "answer_accuracy": 0.6282051282051282,
+      "answer_accuracy_ci_high": 0.732484076433121,
+      "answer_accuracy_ci_low": 0.5238095238095238,
+      "baseline": "river_d",
+      "n": 246,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "usr": 0.0,
+      "usr_ci_high": 0.0,
+      "usr_ci_low": 0.0
+    },
+    {
+      "answer_accuracy": 0.8012820512820513,
+      "answer_accuracy_ci_high": 0.874025974025974,
+      "answer_accuracy_ci_low": 0.7245033112582782,
+      "baseline": "river_l",
+      "n": 1230,
+      "rfr": 0.0,
+      "rfr_ci_high": 0.0,
+      "rfr_ci_low": 0.0,
+      "usr": 0.6666666666666666,
+      "usr_ci_high": 1.0,
+      "usr_ci_low": 0.0
+    }
+  ],
+  "spec": {
+    "caption": "Overall controlled comparison across normalized RIVER-Bench prediction records.",
+    "comparison_mode": "controlled",
+    "conditional_on": null,
+    "confidence_intervals": "95% bootstrap confidence intervals over paired examples where pair_id is available; otherwise over example-level rows.",
+    "directions": {
+      "answer_accuracy": "higher",
+      "rfr": "lower",
+      "usr": "lower"
+    },
+    "family_number": 1,
+    "filters": "comparison_mode == controlled; all labelled test rows",
+    "footnotes": [
+      "Controlled rows share evidence and budgets where technically valid.",
+      "Lower is better for RFR, USR, and ECE."
+    ],
+    "grouping": [
+      "baseline"
+    ],
+    "minimum_required_data": "At least two controlled baselines with complete primary labels.",
+    "required_columns": [
+      "baseline",
+      "comparison_mode",
+      "gold_state",
+      "predicted_state",
+      "gold_hypothesis_id",
+      "predicted_hypothesis_id"
+    ],
+    "statistical_test_source": "river.evaluation.statistics",
+    "table_id": "overall_controlled_baseline_comparison",
+    "title": "Overall controlled baseline comparison"
+  }
+}

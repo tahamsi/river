@@ -1,0 +1,4 @@
+{
+  "checkpoint": "checkpoints/river_l_full.pt",
+  "device": "cpu"
+}

@@ -1,0 +1,80 @@
+\begin{table}
+\centering
+\caption{Per-intervention revision accuracy and coverage.}
+\begin{tabular}{lllllllll}
+intervention & baseline & n & accuracy & accuracy\_ci\_low & accuracy\_ci\_high & coverage & coverage\_ci\_low & coverage\_ci\_high \\ \hline
+concurrent\_disagreement & naive\_rag & 16 & NA & NA & NA & NA & NA & NA \\
+concurrent\_disagreement & stateless\_rag & 16 & NA & NA & NA & NA & NA & NA \\
+concurrent\_disagreement & last\_write\_wins & 16 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+concurrent\_disagreement & recency\_weighted & 16 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+concurrent\_disagreement & minicheck\_no\_revision & 16 & 0.000 & 0.000 & 0.000 & 0.250 & 0.000 & 0.625 \\
+concurrent\_disagreement & river\_d & 16 & 0.000 & 0.000 & 0.000 & 0.750 & 0.375 & 1.000 \\
+concurrent\_disagreement & river\_l & 80 & 0.900 & 0.800 & 1.000 & 0.975 & 0.925 & 1.000 \\
+evidence\_removal & naive\_rag & 66 & NA & NA & NA & NA & NA & NA \\
+evidence\_removal & stateless\_rag & 66 & NA & NA & NA & NA & NA & NA \\
+evidence\_removal & last\_write\_wins & 66 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+evidence\_removal & recency\_weighted & 66 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+evidence\_removal & minicheck\_no\_revision & 66 & 0.470 & 0.424 & 0.500 & 0.470 & 0.424 & 0.500 \\
+evidence\_removal & river\_d & 66 & 0.970 & 0.924 & 1.000 & 0.500 & 0.500 & 0.500 \\
+evidence\_removal & river\_l & 330 & 0.967 & 0.921 & 1.000 & 0.503 & 0.500 & 0.509 \\
+expired\_evidence & naive\_rag & 52 & NA & NA & NA & NA & NA & NA \\
+expired\_evidence & stateless\_rag & 52 & NA & NA & NA & NA & NA & NA \\
+expired\_evidence & last\_write\_wins & 52 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+expired\_evidence & recency\_weighted & 52 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+expired\_evidence & minicheck\_no\_revision & 52 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+expired\_evidence & river\_d & 52 & \textbf{1.000} & 1.000 & 1.000 & \textbf{1.000} & 1.000 & 1.000 \\
+expired\_evidence & river\_l & 260 & \textbf{1.000} & 1.000 & 1.000 & \textbf{1.000} & 1.000 & 1.000 \\
+insufficient\_evidence\_nei & naive\_rag & 24 & NA & NA & NA & NA & NA & NA \\
+insufficient\_evidence\_nei & stateless\_rag & 24 & NA & NA & NA & NA & NA & NA \\
+insufficient\_evidence\_nei & last\_write\_wins & 24 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+insufficient\_evidence\_nei & recency\_weighted & 24 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+insufficient\_evidence\_nei & minicheck\_no\_revision & 24 & 0.583 & 0.333 & 0.833 & 0.417 & 0.167 & 0.667 \\
+insufficient\_evidence\_nei & river\_d & 24 & 0.083 & 0.000 & 0.250 & 0.917 & 0.750 & 1.000 \\
+insufficient\_evidence\_nei & river\_l & 120 & 0.917 & 0.750 & 1.000 & 0.083 & 0.000 & 0.250 \\
+order\_reversal & naive\_rag & 58 & NA & NA & NA & NA & NA & NA \\
+order\_reversal & stateless\_rag & 58 & NA & NA & NA & NA & NA & NA \\
+order\_reversal & last\_write\_wins & 58 & 0.483 & 0.448 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+order\_reversal & recency\_weighted & 58 & 0.483 & 0.448 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+order\_reversal & minicheck\_no\_revision & 58 & 0.000 & 0.000 & 0.000 & 0.828 & 0.690 & 0.966 \\
+order\_reversal & river\_d & 58 & 0.069 & 0.000 & 0.172 & 0.069 & 0.000 & 0.172 \\
+order\_reversal & river\_l & 290 & 0.552 & 0.407 & 0.697 & 0.903 & 0.800 & 0.986 \\
+repeated\_weak\_assertion & naive\_rag & 10 & NA & NA & NA & NA & NA & NA \\
+repeated\_weak\_assertion & stateless\_rag & 10 & NA & NA & NA & NA & NA & NA \\
+repeated\_weak\_assertion & last\_write\_wins & 10 & 0.300 & 0.100 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+repeated\_weak\_assertion & recency\_weighted & 10 & 0.300 & 0.100 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+repeated\_weak\_assertion & minicheck\_no\_revision & 10 & 0.200 & 0.000 & 0.600 & 0.400 & 0.000 & 0.800 \\
+repeated\_weak\_assertion & river\_d & 10 & 0.400 & 0.000 & 0.800 & 0.800 & 0.400 & 1.000 \\
+repeated\_weak\_assertion & river\_l & 50 & 0.300 & 0.020 & 0.580 & 0.980 & 0.940 & 1.000 \\
+retroactive\_correction & naive\_rag & 2 & NA & NA & NA & NA & NA & NA \\
+retroactive\_correction & stateless\_rag & 2 & NA & NA & NA & NA & NA & NA \\
+retroactive\_correction & last\_write\_wins & 2 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+retroactive\_correction & recency\_weighted & 2 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+retroactive\_correction & minicheck\_no\_revision & 2 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+retroactive\_correction & river\_d & 2 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+retroactive\_correction & river\_l & 10 & 0.400 & 0.400 & 0.400 & 0.900 & 0.900 & 0.900 \\
+supported\_genuine\_update & naive\_rag & 6 & NA & NA & NA & NA & NA & NA \\
+supported\_genuine\_update & stateless\_rag & 6 & NA & NA & NA & NA & NA & NA \\
+supported\_genuine\_update & last\_write\_wins & 6 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+supported\_genuine\_update & recency\_weighted & 6 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+supported\_genuine\_update & minicheck\_no\_revision & 6 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+supported\_genuine\_update & river\_d & 6 & 0.667 & 0.500 & 1.000 & \textbf{1.000} & 1.000 & 1.000 \\
+supported\_genuine\_update & river\_l & 30 & 0.500 & 0.500 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+temporal\_evolution & naive\_rag & 6 & NA & NA & NA & NA & NA & NA \\
+temporal\_evolution & stateless\_rag & 6 & NA & NA & NA & NA & NA & NA \\
+temporal\_evolution & last\_write\_wins & 6 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+temporal\_evolution & recency\_weighted & 6 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+temporal\_evolution & minicheck\_no\_revision & 6 & 0.000 & 0.000 & 0.000 & \textbf{1.000} & 1.000 & 1.000 \\
+temporal\_evolution & river\_d & 6 & 0.000 & 0.000 & 0.000 & 0.667 & 0.000 & 1.000 \\
+temporal\_evolution & river\_l & 30 & 0.133 & 0.000 & 0.400 & \textbf{1.000} & 1.000 & 1.000 \\
+unsupported\_late\_assertion & naive\_rag & 8 & NA & NA & NA & NA & NA & NA \\
+unsupported\_late\_assertion & stateless\_rag & 8 & NA & NA & NA & NA & NA & NA \\
+unsupported\_late\_assertion & last\_write\_wins & 8 & 0.375 & 0.125 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+unsupported\_late\_assertion & recency\_weighted & 8 & 0.375 & 0.125 & 0.500 & \textbf{1.000} & 1.000 & 1.000 \\
+unsupported\_late\_assertion & minicheck\_no\_revision & 8 & 0.250 & 0.000 & 0.750 & 0.250 & 0.000 & 0.750 \\
+unsupported\_late\_assertion & river\_d & 8 & 0.250 & 0.000 & 0.750 & 0.500 & 0.000 & 1.000 \\
+unsupported\_late\_assertion & river\_l & 40 & 0.175 & 0.000 & 0.375 & 0.950 & 0.850 & 1.000 \\
+\end{tabular}
+\footnotesize{Each intervention row is computed only from examples carrying that intervention label.}
+\footnotesize{accuracy is not applicable for 20 of 70 rows: it needs a predicted revision state, which this system does not emit.}
+\footnotesize{coverage is not applicable for 20 of 70 rows: it needs a predicted revision state, which this system does not emit.}
+\end{table}

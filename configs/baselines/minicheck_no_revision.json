@@ -1,0 +1,19 @@
+{
+  "pipeline": "retrieve_generate_atomic_claims_exact_chunk_minicheck_accept_retry_abstain",
+  "verifier": {
+    "package_spec": "minicheck @ git+https://github.com/Liyan06/MiniCheck.git@b58b9fa69acbd1015ec970fa65dd752413a053d2",
+    "package_version": "0.1.0",
+    "package_commit": "b58b9fa69acbd1015ec970fa65dd752413a053d2",
+    "repository_license": "Apache-2.0",
+    "model_name": "flan-t5-large",
+    "model_identifier": "lytang/MiniCheck-Flan-T5-Large",
+    "model_revision": "96eafd01cee2d16cf81aaa2fb226b14f422a37b3",
+    "model_license": "MIT",
+    "inference_device": "auto",
+    "batch_size": 16,
+    "max_input_length": 2048,
+    "support_threshold": 0.5,
+    "cache_dir": ".cache/minicheck",
+    "calibration_file": null
+  }
+}
